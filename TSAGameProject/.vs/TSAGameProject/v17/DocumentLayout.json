@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\playercontrollerrb2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|c:\\.tsa\\tsagameproject2024\\tsagameproject\\assets\\scriptsorsmth\\game config\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\game config\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\game config\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerControllerRB2D.cs",
+              "DocumentMoniker": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
+              "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
+              "RelativeToolTip": "Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T05:16:26.695Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -30,21 +43,7 @@
               "RelativeToolTip": "Assets\\Scriptsorsmth\\Game Config\\PlayerConfig.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:19:36.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerControllerRB2D.cs",
-              "DocumentMoniker": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
-              "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
-              "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
-              "RelativeToolTip": "Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwB0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:16:26.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T05:19:36.768Z"
             },
             {
               "$type": "Bookmark",
