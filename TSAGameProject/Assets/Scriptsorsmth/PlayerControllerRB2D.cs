@@ -38,7 +38,7 @@ public class PlayerControllerRB2D : MonoBehaviour
             speed = 1f;
         }
         //Sped jump system
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb2D.velocity.y) < 0.001f)
+        if (Input.GetButton("Jump") && Mathf.Abs(rb2D.velocity.y) < 0.001f)
         {
             rb2D.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
