@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,8 @@ public class Levels : MonoBehaviour
 {
     public enum Level
     {
-       id00_levelTutorial
+       id00_tutorial, 
+       id01
        
     };
 
@@ -21,4 +23,5 @@ public class Levels : MonoBehaviour
     {
         
     }
+
 }

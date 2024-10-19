@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 public class Map : MonoBehaviour
 {
-    public List<GameObject> mapObjects;
 
     
     // Start is called before the first frame update
@@ -19,5 +19,16 @@ public class Map : MonoBehaviour
         
     }
 
+    public GameObject[] getAllMapObjects()
+    {
+        List<GameObject> mapObjs = new List<GameObject>();
+        Assert.AreNotEqual(GetComponentsInChildren<MapObject>(), null);
+        foreach (MapObject gameObj in GetComponentsInChildren<MapObject>())
+        {
+            mapObjs.Add(gameObj.gameObject);
+        }
+        return mapObjs.ToArray();
+
+    }
     
 }
