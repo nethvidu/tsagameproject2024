@@ -32,20 +32,12 @@ public class PlayerControllerRB2D : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         float horizontalMove = horizontalInput * speed;
         // Creates the movement vector/sets velocity
-        if ((Mathf.Abs(horizontalMove) > 0f && Mathf.Abs(horizontalMove) > 12))
-        {
-            speed = Accel;
-        }
-        else if ((Mathf.Abs(horizontalMove) > Max_Speed))
-        {
-            speed = 1f;
-        }
         // Apply force if jump button is pressed
         if (Input.GetButton("Jump") && Mathf.Abs(rb2D.velocity.y) < 0.001f)
         {
             rb2D.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
-        rb2D.velocity = new Vector2((rb2D.velocity.x + horizontalMove)*0.955f, rb2D.velocity.y); // Set rigidbody velocity
+        rb2D.velocity = new Vector2(Mathf.Clamp((rb2D.velocity.x + horizontalMove), -Max_Speed, Max_Speed)*0.955f, rb2D.velocity.y); // Set rigidbody velocity
         Velocity = Mathf.Sqrt(rb2D.velocity.x * rb2D.velocity.x + rb2D.velocity.y * rb2D.velocity.y); // Update velocity PROPERTY
 
     }
