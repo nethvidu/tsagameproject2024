@@ -9,14 +9,20 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     private bool isCollidableEditor = true;
 
     private Vector2 originalColliderSize;
-
+    
     [field : SerializeField]
     public bool isActive {  get; set; }
+    public Collider2D Confinercollider;
+    [field: SerializeField]
+    private bool isConfiner { get; set; }
+    //Checks if an object is a cameraconfiner
+   
     [field: SerializeField]
     public bool isInteractable { get; set; }
     [field: SerializeField]
     public KeyCode interactButton {  get; set; }
     [SerializeField]
+
     public bool isCollidable
     {   
         set
@@ -33,6 +39,12 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     {
         originalColliderSize = GetComponent<BoxCollider2D>().size;
         isCollidable = true; 
+        //Setting the confiner collider variable here
+        //How do I get this variable to the one in the script called GetConfiner in Player1Cam?
+        //I'll admit I don't fully understand how this level system works, and I don't want to break it
+        if (isConfiner == true) {
+            Confinercollider = GetComponent<CompositeCollider2D>();
+        }
         
     }
 

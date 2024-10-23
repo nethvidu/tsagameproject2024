@@ -29,6 +29,8 @@ public class LevelManager : MonoBehaviour
                 GameObject newGameObject = Instantiate(gameObject);
                 newGameObject.transform.parent = transform;
                 newGameObject.GetComponent<MapObject>().isActive = true;
+                
+                
 
             }
             return 1;
