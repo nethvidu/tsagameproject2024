@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3284724895284104895}
   - component: {fileID: 550924230562286430}
   - component: {fileID: 3762846072247623646}
+  - component: {fileID: 8049023304086381293}
   m_Layer: 0
   m_Name: CameraBounds
   m_TagString: Untagged
@@ -163,6 +164,23 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 67432240394231344}
+--- !u!114 &8049023304086381293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67432240394231344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isConfiner>k__BackingField: 1
+  <isInteractable>k__BackingField: 0
+  <interactButton>k__BackingField: 0
 --- !u!1 &810242239350096027
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &1191569806450671566
@@ -455,6 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &6369590031779835081
