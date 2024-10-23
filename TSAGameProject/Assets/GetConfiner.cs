@@ -12,7 +12,7 @@ public class GetConfiner : MonoBehaviour
     void Start()
     {
         //Sets the confiner property to the boundingshape variable
-        Confiner.m_BoundingShape2D = BoundingShape
+        Confiner.m_BoundingShape2D = BoundingShape;
     }
 
     // Update is called once per frame
