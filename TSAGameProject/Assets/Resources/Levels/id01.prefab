@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7940751382047953991}
   - component: {fileID: 208190912555174034}
   - component: {fileID: 6570201108164982550}
-  - component: {fileID: 7806156643534326619}
+  - component: {fileID: 9040780714735014228}
   m_Layer: 0
   m_Name: Platform (1)
   m_TagString: Untagged
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1265059381478971687}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.28810912, w: 0.9575976}
-  m_LocalPosition: {x: -11.21, y: 0.26, z: -0.018512947}
-  m_LocalScale: {x: 11.1532, y: 0.9801, z: 1}
+  m_LocalPosition: {x: -11.209999, y: 0.26, z: -0.018512942}
+  m_LocalScale: {x: 11.1532, y: 0.98010004, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4890873783931321335}
@@ -117,7 +117,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +131,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7806156643534326619
+--- !u!114 &9040780714735014228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
-  <isActive>k__BackingField: 0
+  <isActive>k__BackingField: 1
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &1715876636864095547
@@ -158,7 +160,7 @@ GameObject:
   - component: {fileID: 7540907522305619043}
   - component: {fileID: 3493290935899244112}
   - component: {fileID: 5682758110864107568}
-  - component: {fileID: 5464320006362176116}
+  - component: {fileID: 2180216343621860751}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -175,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 1715876636864095547}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -2.96, z: -0.018512947}
+  m_LocalPosition: {x: 0.09, y: -2.96, z: -0.018512942}
   m_LocalScale: {x: 11.1532, y: 0.9801, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -264,7 +266,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,7 +280,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5464320006362176116
+--- !u!114 &2180216343621860751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,9 +293,121 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
-  <isActive>k__BackingField: 0
+  <isActive>k__BackingField: 1
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
+<<<<<<< Updated upstream
+=======
+--- !u!1 &2873361456981877618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3887645206359008957}
+  - component: {fileID: 4794832038231390776}
+  - component: {fileID: 7453051205675250959}
+  m_Layer: 0
+  m_Name: CameraBounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3887645206359008957
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873361456981877618}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.370255, y: -1.2926824, z: 0.11577896}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &4794832038231390776
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873361456981877618}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!66 &7453051205675250959
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2873361456981877618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 1
+  m_GenerationType: 1
+  m_EdgeRadius: 0
+  m_ColliderPaths: []
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 29.866343, y: -2.2542334}
+      - {x: 29.866343, y: 6.234994}
+      - {x: -15.770821, y: 6.234965}
+      - {x: -15.770792, y: -2.2542334}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+  m_UseDelaunayMesh: 1
+  m_CompositeGameObject: {fileID: 2873361456981877618}
+>>>>>>> Stashed changes
 --- !u!1 &3183715789511820231
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +419,7 @@ GameObject:
   - component: {fileID: 9015594098136549534}
   - component: {fileID: 1177953672842641128}
   - component: {fileID: 4913482578179891007}
-  - component: {fileID: 1513400763876982799}
+  - component: {fileID: 1574530849838569897}
   m_Layer: 0
   m_Name: Platform (3)
   m_TagString: Untagged
@@ -322,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 3183715789511820231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 23.79, y: 0.3, z: -0.018512947}
+  m_LocalPosition: {x: 23.79, y: 0.29999995, z: -0.018512942}
   m_LocalScale: {x: 11.1532, y: 0.9801, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -411,7 +525,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,7 +539,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1513400763876982799
+--- !u!114 &1574530849838569897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -438,7 +552,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
-  <isActive>k__BackingField: 0
+  <isActive>k__BackingField: 1
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &4855060962137374086
@@ -471,10 +587,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7540907522305619043}
-  - {fileID: 7940751382047953991}
-  - {fileID: 3735762591372623099}
   - {fileID: 9015594098136549534}
+<<<<<<< Updated upstream
+=======
+  - {fileID: 3735762591372623099}
+  - {fileID: 7940751382047953991}
+  - {fileID: 7540907522305619043}
+  - {fileID: 3887645206359008957}
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7095449955561416608
@@ -500,7 +620,7 @@ GameObject:
   - component: {fileID: 3735762591372623099}
   - component: {fileID: 8460903699722565144}
   - component: {fileID: 4551236590227020906}
-  - component: {fileID: 1522889303948900298}
+  - component: {fileID: 7120376015818901778}
   m_Layer: 0
   m_Name: Platform (2)
   m_TagString: Untagged
@@ -517,7 +637,7 @@ Transform:
   m_GameObject: {fileID: 7869739451861815650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.77, y: -1.52, z: -0.018512947}
+  m_LocalPosition: {x: 11.77, y: -1.52, z: -0.018512942}
   m_LocalScale: {x: 11.1532, y: 0.9801, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -606,7 +726,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -620,7 +740,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1522889303948900298
+--- !u!114 &7120376015818901778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -633,6 +753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
-  <isActive>k__BackingField: 0
+  <isActive>k__BackingField: 1
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0

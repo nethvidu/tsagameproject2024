@@ -7,7 +7,12 @@ public class Game : MonoBehaviour
 {
     public Levels.Level Level = Levels.Level.id01; //Placeholder
     private LevelManager lvlMgr;
+<<<<<<< Updated upstream
   
+=======
+    public PlayerControllerRB2D[] players;
+
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
