@@ -12,10 +12,6 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
 
     [field : SerializeField]
     public bool isActive {  get; set; }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
     [field: SerializeField]
     public bool isInteractable { get; set; }
     [field: SerializeField]

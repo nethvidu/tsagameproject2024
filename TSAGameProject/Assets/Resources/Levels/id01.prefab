@@ -298,8 +298,8 @@ MonoBehaviour:
   <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
-<<<<<<< Updated upstream
-=======
+
+
 --- !u!1 &2873361456981877618
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +407,6 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 1
   m_CompositeGameObject: {fileID: 2873361456981877618}
->>>>>>> Stashed changes
 --- !u!1 &3183715789511820231
 GameObject:
   m_ObjectHideFlags: 0
@@ -588,13 +587,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9015594098136549534}
-<<<<<<< Updated upstream
-=======
+
+
   - {fileID: 3735762591372623099}
   - {fileID: 7940751382047953991}
   - {fileID: 7540907522305619043}
   - {fileID: 3887645206359008957}
->>>>>>> Stashed changes
+
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7095449955561416608

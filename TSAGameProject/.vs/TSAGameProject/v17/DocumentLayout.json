@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\mapobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\mapobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\playercontrollerrb2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\playercontrollerrb2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +23,16 @@
       "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\levels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\playercontrollerrb2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\playercontrollerrb2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|C:\\.TSA\\tsagameproject2024\\TSAGameProject\\assets\\scriptsorsmth\\game config\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A5CECFB2-D653-D19D-1C0E-6DD660AE3378}|Assembly-CSharp.csproj|solutionrelative:assets\\scriptsorsmth\\game config\\playerconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\.tsa\\tsagameproject2024\\tsagameproject\\assets\\getconfiner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\getconfiner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +42,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "GetConfiner.cs",
+              "DocumentMoniker": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\GetConfiner.cs",
+              "RelativeDocumentMoniker": "Assets\\GetConfiner.cs",
+              "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\GetConfiner.cs",
+              "RelativeToolTip": "Assets\\GetConfiner.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T04:11:04.142Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -48,7 +64,7 @@
               "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\LevelManager.cs",
               "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\LevelManager.cs",
               "RelativeToolTip": "Assets\\Scriptsorsmth\\LevelManager.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAgwDgAAAA3AAAA",
+              "ViewState": "AQIAACsAAAAAAAAAAAAiwEsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T02:08:30.855Z",
               "EditorCaption": ""
@@ -59,16 +75,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MapObject.cs",
               "DocumentMoniker": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\MapObject.cs",
               "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\MapObject.cs",
               "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\MapObject.cs",
               "RelativeToolTip": "Assets\\Scriptsorsmth\\MapObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAcAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T02:19:08.946Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T02:19:08.946Z"
             },
             {
               "$type": "Document",
@@ -80,21 +95,19 @@
               "RelativeToolTip": "Assets\\Scriptsorsmth\\Levels.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T02:13:53.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T02:13:53.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\Game.cs",
               "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\Game.cs",
               "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\Game.cs",
               "RelativeToolTip": "Assets\\Scriptsorsmth\\Game.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T02:13:27.885Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T02:13:27.885Z"
             },
             {
               "$type": "Document",
@@ -104,14 +117,13 @@
               "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\Map.cs",
               "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\Map.cs",
               "RelativeToolTip": "Assets\\Scriptsorsmth\\Map.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T02:09:31.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-19T02:09:31.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "PlayerControllerRB2D.cs",
               "DocumentMoniker": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
               "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
@@ -119,8 +131,7 @@
               "RelativeToolTip": "Assets\\Scriptsorsmth\\PlayerControllerRB2D.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T05:16:26.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T05:16:26.695Z"
             },
             {
               "$type": "Document",

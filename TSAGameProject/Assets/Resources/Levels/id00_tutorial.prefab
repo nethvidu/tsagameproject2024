@@ -1,8 +1,7 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< Updated upstream
+
 --- !u!1 &810242239350096027
-=======
 --- !u!1 &4153671098719842933
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +381,7 @@ MonoBehaviour:
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &7942613287183925733
->>>>>>> Stashed changes
+
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -390,7 +389,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
+
   - component: {fileID: 4558632468475993088}
   - component: {fileID: 3326822686349937885}
   - component: {fileID: 4708864710939511158}
@@ -542,12 +541,12 @@ GameObject:
   - component: {fileID: 8967568043558604560}
   - component: {fileID: 6394153430659498865}
   - component: {fileID: 307435669091461259}
-=======
+
   - component: {fileID: 1306808415371008586}
   - component: {fileID: 6562525037656558894}
   - component: {fileID: 342223035212297374}
   - component: {fileID: 4771876490695499830}
->>>>>>> Stashed changes
+
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -681,7 +680,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
-<<<<<<< Updated upstream
+
+
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &6369590031779835081
@@ -730,9 +730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78546b41c5b712f4a8532e51ec8dcc85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-=======
+
   Confinercollider: {fileID: 0}
   <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
->>>>>>> Stashed changes
+
