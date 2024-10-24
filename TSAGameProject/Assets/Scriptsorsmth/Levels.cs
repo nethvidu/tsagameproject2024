@@ -8,7 +8,8 @@ public class Levels : MonoBehaviour
     public enum Level
     {
        id00_tutorial, 
-       id01
+       id01,
+       id02
        
     };
 

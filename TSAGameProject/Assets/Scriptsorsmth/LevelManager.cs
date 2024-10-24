@@ -37,6 +37,8 @@ public class LevelManager : MonoBehaviour
                 GameObject newGameObject = Instantiate(gameObject);
                 newGameObject.transform.parent = boundsTransform.transform;
                 newGameObject.GetComponent<MapObject>().isActive = true;
+                
+                
 
             }
             boundsTransform.GetComponent<CompositeCollider2D>().GenerateGeometry(); // VERY IMPORTANT!!!! Regenerates composite collider after all children are present
