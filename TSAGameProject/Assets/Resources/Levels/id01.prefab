@@ -145,8 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &1715876636864095547
@@ -294,12 +292,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
-
-
 --- !u!1 &2873361456981877618
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,8 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3887645206359008957}
-  - component: {fileID: 4794832038231390776}
-  - component: {fileID: 7453051205675250959}
+  - component: {fileID: 2647038368496385883}
   m_Layer: 0
   m_Name: CameraBounds
   m_TagString: Untagged
@@ -333,35 +326,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4890873783931321335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &4794832038231390776
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2873361456981877618}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!66 &7453051205675250959
-CompositeCollider2D:
+--- !u!60 &2647038368496385883
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -389,24 +355,31 @@ CompositeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 1
-  m_GenerationType: 1
-  m_EdgeRadius: 0
-  m_ColliderPaths: []
-  m_CompositePaths:
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
     m_Paths:
-    - - {x: 29.866343, y: -2.2542334}
-      - {x: 29.866343, y: 6.234994}
-      - {x: -15.770821, y: 6.234965}
-      - {x: -15.770792, y: -2.2542334}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 1
-  m_CompositeGameObject: {fileID: 2873361456981877618}
+    - - {x: 6.0384545, y: -2.1677432}
+      - {x: 17.738653, y: -0.72156286}
+      - {x: 29.74891, y: 1.0945164}
+      - {x: 29.86835, y: 13.906347}
+      - {x: -15.990562, y: 13.653494}
+      - {x: -15.804733, y: 4.2195187}
+      - {x: -6.492306, y: -1.9355626}
+      - {x: -5.1112494, y: -2.1770515}
+      - {x: 0.17445755, y: -2.2039986}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3183715789511820231
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,8 +525,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &4855060962137374086
@@ -587,13 +558,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9015594098136549534}
-
-
   - {fileID: 3735762591372623099}
   - {fileID: 7940751382047953991}
   - {fileID: 7540907522305619043}
   - {fileID: 3887645206359008957}
-
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7095449955561416608
@@ -753,7 +721,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0

@@ -24,12 +24,13 @@ public class LevelManager : MonoBehaviour
 
     public int loadMap(Map map, bool overridePlayerCamBounds = true)
     {
-        GameObject boundsTransform = Instantiate(map.GetComponentInChildren<CompositeCollider2D>().gameObject);
+        GameObject boundsTransform = Instantiate(map.GetComponentInChildren<PolygonCollider2D>().gameObject);
         boundsTransform.transform.parent = transform;
         if (overridePlayerCamBounds)
         {
-            GameObject.Find("PlayerCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = boundsTransform.GetComponent<CompositeCollider2D>();
-        }
+            GameObject.Find("PlayerCam").GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = boundsTransform.GetComponent<PolygonCollider2D>();
+        } 
+
         try
         {
             foreach (GameObject gameObject in map.getAllMapObjects())
@@ -41,7 +42,7 @@ public class LevelManager : MonoBehaviour
                 
 
             }
-            boundsTransform.GetComponent<CompositeCollider2D>().GenerateGeometry(); // VERY IMPORTANT!!!! Regenerates composite collider after all children are present
+            //boundsTransform.GetComponent<PolygonCollider2D>().GenerateGeometry(); // VERY IMPORTANT!!!! Regenerates composite collider after all children are present
             return 1;
         }
         catch (Exception e)

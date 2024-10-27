@@ -31,9 +31,10 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     }
     void Start()
     {
-        originalColliderSize = GetComponent<BoxCollider2D>().size;
-        isCollidable = true; 
-        
+        if (isCollidableEditor) {
+            originalColliderSize = GetComponent<BoxCollider2D>().size;
+            isCollidable = true; 
+        }
     }
 
     // Update is called once per frame
