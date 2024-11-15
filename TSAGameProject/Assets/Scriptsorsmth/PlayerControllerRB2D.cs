@@ -60,7 +60,7 @@ public class PlayerControllerRB2D : MonoBehaviour
             Jump = true;
             CreateDust();
         }
-        else if(rb2D.velocity.y < 0.001f)
+        if(rb2D.velocity.y < 0.001f)
         {
             fall = true;
             Jump = false;
