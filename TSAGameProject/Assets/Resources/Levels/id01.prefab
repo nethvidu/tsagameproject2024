@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 208190912555174034}
   - component: {fileID: 6570201108164982550}
   - component: {fileID: 7806156643534326619}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,6 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &1715876636864095547
@@ -159,7 +161,7 @@ GameObject:
   - component: {fileID: 3493290935899244112}
   - component: {fileID: 5682758110864107568}
   - component: {fileID: 5464320006362176116}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,6 +294,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &2873361456981877618
@@ -472,6 +476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &3183715789511820231
@@ -486,7 +492,7 @@ GameObject:
   - component: {fileID: 1177953672842641128}
   - component: {fileID: 4913482578179891007}
   - component: {fileID: 1513400763876982799}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,6 +625,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &4855060962137374086
@@ -682,7 +690,7 @@ GameObject:
   - component: {fileID: 8460903699722565144}
   - component: {fileID: 4551236590227020906}
   - component: {fileID: 1522889303948900298}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,5 +823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
+  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0

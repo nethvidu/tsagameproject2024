@@ -5513,10 +5513,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Health>k__BackingField: 0
-  <Velocity>k__BackingField: 0
-  Avatar: {fileID: 7035990375240347508}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  groundCheckRadius: 0.5
+  groundCheckOffset: 0
+  Max_Speed: 12
+  JumpForce: 7
+  speed: 1
+  horizontalInput: 0
   animator: {fileID: 1678073945}
   fall: 0
+  Jump: 0
+  isGrounded: 0
+  <Velocity>k__BackingField: 0
+  Avatar: {fileID: 7035990375240347508}
   dust: {fileID: 528863182}
 --- !u!70 &953288116
 CapsuleCollider2D:

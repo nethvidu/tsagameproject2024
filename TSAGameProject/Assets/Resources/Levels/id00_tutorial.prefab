@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
   <isConfiner>k__BackingField: 1
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
@@ -193,7 +194,7 @@ GameObject:
   - component: {fileID: 3326822686349937885}
   - component: {fileID: 4708864710939511158}
   - component: {fileID: 8199975028580383895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,6 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
   <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
@@ -341,7 +343,7 @@ GameObject:
   - component: {fileID: 8967568043558604560}
   - component: {fileID: 6394153430659498865}
   - component: {fileID: 307435669091461259}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -474,6 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
+  Confinercollider: {fileID: 0}
   <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
