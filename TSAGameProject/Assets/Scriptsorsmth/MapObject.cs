@@ -39,9 +39,6 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     {
         originalColliderSize = GetComponent<BoxCollider2D>().size;
         isCollidable = true; 
-        //Setting the confiner collider variable here
-        //How do I get this variable to the one in the script called GetConfiner in Player1Cam?
-        //I'll admit I don't fully understand how this level system works, and I don't want to break it
         if (isConfiner == true) {
             Confinercollider = GetComponent<CompositeCollider2D>();
         }

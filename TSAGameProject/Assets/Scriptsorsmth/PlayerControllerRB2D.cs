@@ -37,6 +37,10 @@ public class PlayerControllerRB2D : MonoBehaviour
     public float Velocity { get; private set; } // Can only be set by this class
     public GameObject Avatar;
     public ParticleSystem dust;
+    [field: SerializeField]
+    public string LeftRight;
+    [field: SerializeField]
+    public string JumpControl;
 
     // Start is called before the first frame update
     void Start()
@@ -50,11 +54,11 @@ public class PlayerControllerRB2D : MonoBehaviour
     void FixedUpdate()
     {
         // Get horizontal input
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxisRaw(LeftRight);
         float horizontalMove = horizontalInput * speed;
         // Creates the movement vector/sets velocity
         // Apply force if jump button is pressed
-        if (Input.GetButton("Jump") && isGrounded)
+        if (Input.GetButton(JumpControl) && isGrounded && !Jump)
         {
             rb2D.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
             Jump = true;
