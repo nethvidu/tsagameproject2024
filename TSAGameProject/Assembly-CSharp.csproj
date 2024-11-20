@@ -63,7 +63,9 @@
     <Compile Include="Assets\Scriptsorsmth\Game Config\PlayerConfig.cs" />
     <Compile Include="Assets\Scriptsorsmth\MapObject.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelManager.cs" />
+    <Compile Include="Assets\Scriptsorsmth\LevelScripts\Level1.cs" />
     <Compile Include="Assets\Scriptsorsmth\Game.cs" />
+    <Compile Include="Assets\Scriptsorsmth\LevelScript.cs" />
     <Compile Include="Assets\Scriptsorsmth\PlayerControllerRB2D.cs" />
     <Compile Include="Assets\Scriptsorsmth\Levels.cs" />
     <Compile Include="Assets\Scriptsorsmth\Map.cs" />

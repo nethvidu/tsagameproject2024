@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     {
         lvlMgr = FindObjectOfType<LevelManager>(); 
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(Level));
+        this.startLevel(lvlMgr);
     }
 
     // Update is called once per frame
@@ -20,6 +21,11 @@ public class Game : MonoBehaviour
     {
         
 
+    }
+
+    void startLevel(LevelManager mgr)
+    {
+        StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
     }
 }
  

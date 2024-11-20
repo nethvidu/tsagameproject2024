@@ -5,6 +5,7 @@ using UnityEngine.Assertions;
 
 public class Map : MonoBehaviour
 {
+    public LevelScript LevelScript;
 
     
     // Start is called before the first frame update
@@ -27,6 +28,7 @@ public class Map : MonoBehaviour
         {
             mapObjs.Add(gameObj.gameObject);
         }
+        mapObjs.Add(LevelScript.gameObject);
         return mapObjs.ToArray();
 
     }
