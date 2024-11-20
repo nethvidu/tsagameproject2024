@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour
         boundsTransform.transform.parent = transform;
         if (overridePlayerCamBounds)
         {
-            GameObject.Find("PlayerCam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = boundsTransform.GetComponent<CompositeCollider2D>();
+            GameObject.Find("Player1Cam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = boundsTransform.GetComponent<BoxCollider2D>();
         }
         try
         {

@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "Assets\\Scriptsorsmth\\LevelManager.cs",
               "ToolTip": "C:\\.TSA\\tsagameproject2024\\TSAGameProject\\Assets\\Scriptsorsmth\\LevelManager.cs",
               "RelativeToolTip": "Assets\\Scriptsorsmth\\LevelManager.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAIwCkAAAARAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAIwEIAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-19T02:08:30.855Z",
               "EditorCaption": ""
@@ -103,7 +103,8 @@
               "RelativeToolTip": "Assets\\GetConfiner.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T04:11:04.142Z"
+              "WhenOpened": "2024-10-24T04:11:04.142Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

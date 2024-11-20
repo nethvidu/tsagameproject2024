@@ -145,8 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &1715876636864095547
@@ -294,8 +292,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &2873361456981877618
@@ -438,7 +434,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
+  m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -474,10 +470,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isCollidableEditor: 0
+  isCollidableEditor: 1
   <isActive>k__BackingField: 0
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &3183715789511820231
@@ -625,8 +619,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0
 --- !u!1 &4855060962137374086
@@ -664,6 +656,7 @@ Transform:
   - {fileID: 3735762591372623099}
   - {fileID: 9015594098136549534}
   - {fileID: 3887645206359008957}
+  - {fileID: 2983132448659784914}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7095449955561416608
@@ -676,6 +669,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78546b41c5b712f4a8532e51ec8dcc85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelScript: {fileID: 7505607636389211236}
+--- !u!1 &4927145188192583111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2983132448659784914}
+  - component: {fileID: 7505607636389211236}
+  m_Layer: 0
+  m_Name: LevelScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2983132448659784914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927145188192583111}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.3634673, y: 1.9048176, z: 0.11844605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7505607636389211236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4927145188192583111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05a541a45307c845a9f11fc28fec718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7869739451861815650
@@ -823,7 +861,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
-  Confinercollider: {fileID: 0}
-  <isConfiner>k__BackingField: 0
   <isInteractable>k__BackingField: 0
   <interactButton>k__BackingField: 0

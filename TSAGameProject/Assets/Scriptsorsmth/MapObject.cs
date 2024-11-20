@@ -16,7 +16,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     public bool isInteractable { get; set; }
     [field: SerializeField]
     public KeyCode interactButton {  get; set; }
-    [SerializeField]
+    [field: SerializeField]
     public bool isCollidable
     {   
         set
