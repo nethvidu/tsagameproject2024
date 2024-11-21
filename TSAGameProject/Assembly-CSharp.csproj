@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scriptsorsmth\IKtargetIdle.cs" />
     <Compile Include="Assets\Scriptsorsmth\MapObject.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelManager.cs" />
+    <Compile Include="Assets\Scriptsorsmth\InverseMask.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelScripts\Level1.cs" />
     <Compile Include="Assets\Scriptsorsmth\Game.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelScript.cs" />

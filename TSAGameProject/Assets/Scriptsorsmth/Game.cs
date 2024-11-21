@@ -34,7 +34,7 @@ public class Game : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
-
+     
     void startLevel(LevelManager mgr)
     {
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());

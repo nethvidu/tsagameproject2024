@@ -106,7 +106,9 @@ public class PlayerControllerRB2D : MonoBehaviour
             isLetGo = false;
             press1 = false;
         }
-        float horizontalMove = horizontalInput * speed;
+        float horizontalMove = horizontalInput * speed;       
+    
+
         // Creates the movement vector/sets velocity
         // Apply force if jump button is pressed
         if (Input.GetButton(JumpControl) && isGrounded && !Jump)
