@@ -32,3 +32,6 @@ TSAGameProject/.vs/Assembly-CSharp.csproj.dtbcache.json
 /TSAGameProject/UserSettings/Layouts
 *.dwlt
 *.cache
+/TSAGameProject/Logs
+/TSAGameProject/Logs
+/TSAGameProject

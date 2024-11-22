@@ -76,23 +76,25 @@ public class PlayerControllerRB2D : MonoBehaviour
         }
         // Get horizontal input
         horizontalInput = Input.GetAxisRaw(LeftRight);
+        int currentDirection = horizontalInput == 0f ? 0 : (int)Mathf.Sign(horizontalInput);
         // Dash logic
-        if (direction != (int)Mathf.Sign(horizontalInput))
+        if (direction != currentDirection)
         {
             isLetGo = false;
             press1 = false;
+
         }
         if (horizontalInput != 0 && !press1)
         {
             press1 = true;
             press1Time = Time.time;
-            direction = (int)Mathf.Sign(horizontalInput);
+            direction = currentDirection;
         }
         if (press1Time + PlayerConfig.dashInputWindow >= Time.time && !(horizontalInput != 0f))
         {
             isLetGo = true;
         }
-        if (press1 && (int)Mathf.Sign(horizontalInput) == direction && press1Time + PlayerConfig.dashInputWindow >= Time.time && isLetGo && !isDashing)
+        if (press1 && currentDirection == direction && press1Time + PlayerConfig.dashInputWindow >= Time.time && isLetGo && !isDashing)
         {
             rb2D.AddForce(new Vector2(DashForce * direction, 0), ForceMode2D.Impulse);
             print("Dash!!!!");
@@ -106,7 +108,12 @@ public class PlayerControllerRB2D : MonoBehaviour
             isLetGo = false;
             press1 = false;
         }
-        float horizontalMove = horizontalInput * speed;       
+        float horizontalMove = 0;
+        if (Mathf.Clamp(rb2D.velocity.x, -Max_Speed, Max_Speed) == rb2D.velocity.x)
+        {
+            horizontalMove = horizontalInput * speed;
+        }
+
     
 
         // Creates the movement vector/sets velocity
