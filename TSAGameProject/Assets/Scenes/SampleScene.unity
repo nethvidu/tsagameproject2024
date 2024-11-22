@@ -6057,7 +6057,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 519420031}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -6300,6 +6300,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824116135}
   - component: {fileID: 824116134}
+  - component: {fileID: 824116136}
   m_Layer: 0
   m_Name: Level
   m_TagString: Untagged
@@ -6334,6 +6335,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1223359828}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!156049354 &824116136
+Grid:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824116133}
+  m_Enabled: 1
+  m_CellSize: {x: 1, y: 1, z: 1}
+  m_CellGap: {x: 0, y: 0, z: 0}
+  m_CellLayout: 0
+  m_CellSwizzle: 0
 --- !u!1 &953288110
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,11 +6482,11 @@ MonoBehaviour:
     m_Bits: 8
   groundCheckRadius: 0.5
   groundCheckOffset: 0
-  Max_Speed: 12
-  JumpForce: 18
-  DashForce: 10
+  Max_Speed: 8
+  JumpForce: 15
+  DashForce: 15
   DashPeriod: 1
-  speed: 1
+  speed: 0.8
   horizontalInput: 0
   animator: {fileID: 1678073945}
   fall: 0
@@ -6649,7 +6662,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Level: 1
-  players: []
+  players:
+  - {fileID: 953288115}
+  - {fileID: 1742266720}
   UIManager: {fileID: 0}
 --- !u!4 &1020806813
 Transform:
@@ -13262,10 +13277,10 @@ MonoBehaviour:
   groundCheckRadius: 0.5
   groundCheckOffset: 0
   Max_Speed: 6
-  JumpForce: 18
+  JumpForce: 15
   DashForce: 15
   DashPeriod: 1
-  speed: 1
+  speed: 0.8
   horizontalInput: 0
   animator: {fileID: 1177537121}
   fall: 0

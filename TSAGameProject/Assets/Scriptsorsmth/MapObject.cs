@@ -4,6 +4,7 @@ using System.ComponentModel;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
 public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITHIN THE MAP HIERARCHY
@@ -56,11 +57,23 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     {   
         set
         {
-            GetComponent<BoxCollider2D>().size = new Vector2(0f, 0f);
-            if (value)
+            try
             {
-                GetComponent<BoxCollider2D>().size = originalColliderSize;
+                GetComponent<BoxCollider2D>().size = new Vector2(0f, 0f);
+                if (value)
+                {
+                    GetComponent<BoxCollider2D>().size = originalColliderSize;
+                }
             }
+            catch
+            {
+                GetComponent<TilemapCollider2D>().isTrigger = true;
+                if (value)
+                {
+                    GetComponent<TilemapCollider2D>().isTrigger = false;
+                }
+            }
+
             
         }
     }
@@ -109,7 +122,11 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     void Start()
     {
         players = FindObjectOfType<Game>().players;
-        originalColliderSize = GetComponent<BoxCollider2D>().size;
+        try {
+            originalColliderSize = GetComponent<BoxCollider2D>().size;
+        }
+        catch { }
+        
         isCollidable = true; 
         if (isInteractable)
         {

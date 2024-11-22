@@ -179,7 +179,13 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 0
+  <interactableType>k__BackingField: 0
+  <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []
 --- !u!1 &810242239350096027
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +332,13 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
+  <interactableType>k__BackingField: 0
+  <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []
 --- !u!1 &2382314561320191437
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,6 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b05a541a45307c845a9f11fc28fec718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <flags>k__BackingField: []
 --- !u!1 &4701832981963628660
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,8 +478,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 6a24c7d7b3e99a54392a87fb204e8648, type: 3}
   - {fileID: 21300000, guid: 6a24c7d7b3e99a54392a87fb204e8648, type: 3}
   m_LocalAABB:
-    m_Center: {x: 12.79548, y: 3.8326697, z: 0}
-    m_Extent: {x: 18.30836, y: 6.526058, z: 0}
+    m_Center: {x: 27.260544, y: 8.038778, z: 0}
+    m_Extent: {x: 32.773422, y: 10.732101, z: 0}
   m_SpriteSortPoint: 0
 --- !u!114 &1895498864502042146
 MonoBehaviour:
@@ -507,7 +520,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 22.144949, y: 2.0479183, z: 0}
+    - position: {x: 11.187711, y: 3.2401571, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -523,7 +536,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 28.61024, y: 4.9280005, z: 0}
+    - position: {x: 24.91998, y: 8.107303, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -539,7 +552,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 30.413586, y: 9.686699, z: 0}
+    - position: {x: 58.58405, y: 17.940218, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -547,7 +560,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-    - position: {x: 30.461191, y: -1.6775894, z: 0}
+    - position: {x: 59.36793, y: -1.5225439, z: 0}
       leftTangent: {x: 0, y: 0, z: 0}
       rightTangent: {x: 0, y: 0, z: 0}
       mode: 0
@@ -582,13 +595,13 @@ MonoBehaviour:
   m_ColliderSegment:
   - {x: -4.871599, y: -1.9219217}
   - {x: -4.8715987, y: 2.0755389}
-  - {x: 5.087956, y: 2.1062613}
-  - {x: 22.146194, y: 2.046634}
-  - {x: 22.209549, y: 4.9569683}
-  - {x: 28.61151, y: 4.926715}
-  - {x: 28.65248, y: 9.708914}
-  - {x: 30.412308, y: 9.685436}
-  - {x: 30.459906, y: -1.6763265}
+  - {x: 5.088194, y: 2.1062827}
+  - {x: 11.187907, y: 3.2388926}
+  - {x: 22.209267, y: 4.9574156}
+  - {x: 24.920483, y: 8.106126}
+  - {x: 28.65155, y: 9.708978}
+  - {x: 58.582855, y: 17.93856}
+  - {x: 59.366596, y: -1.5212722}
   - {x: 5.040487, y: -2.0504122}
   - {x: -4.871599, y: -1.9219217}
 --- !u!68 &3671355679680981012
@@ -627,14 +640,14 @@ EdgeCollider2D:
   m_EdgeRadius: 0.6
   m_Points:
   - {x: -4.871599, y: -1.9219217}
-  - {x: -4.8715987, y: 2.0755389}
-  - {x: 5.087956, y: 2.1062613}
-  - {x: 22.146194, y: 2.046634}
-  - {x: 22.209549, y: 4.9569683}
-  - {x: 28.61151, y: 4.926715}
-  - {x: 28.65248, y: 9.708914}
-  - {x: 30.412308, y: 9.685436}
-  - {x: 30.459906, y: -1.6763265}
+  - {x: -4.8715987, y: 2.0777452}
+  - {x: -21.038246, y: 6.803667}
+  - {x: 11.187907, y: 3.2388926}
+  - {x: 22.209267, y: 4.9574156}
+  - {x: 24.920483, y: 8.106126}
+  - {x: 28.65155, y: 9.708978}
+  - {x: 58.582855, y: 17.93856}
+  - {x: 59.366596, y: -1.5212722}
   - {x: 5.040487, y: -2.0504122}
   - {x: -4.871599, y: -1.9219217}
   m_AdjacentStartPoint: {x: 0, y: 0}
@@ -656,7 +669,13 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
+  <interactableType>k__BackingField: 0
+  <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []
 --- !u!1 &6369590031779835081
 GameObject:
   m_ObjectHideFlags: 0
