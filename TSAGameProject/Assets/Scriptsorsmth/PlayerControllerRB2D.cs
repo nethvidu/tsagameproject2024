@@ -147,11 +147,11 @@ public class PlayerControllerRB2D : MonoBehaviour
         animator.SetBool("Jump", Jump);
         animator.SetBool("Fall", fall);
         if(horizontalInput > 0) {
-            Avatar.transform.localScale = new Vector3(2,2,2);
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x),transform.localScale.y,2);
             
         }
         else if(horizontalInput < 0) {
-            Avatar.transform.localScale = new Vector3(-2,2,2);
+            transform.localScale = new Vector3(-(Mathf.Abs(transform.localScale.x)),transform.localScale.y,2);
             
         }
     }

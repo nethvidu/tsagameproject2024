@@ -35,5 +35,4 @@ TSAGameProject/.vs/Assembly-CSharp.csproj.dtbcache.json
 /TSAGameProject/Logs
 /TSAGameProject/Logs
 /TSAGameProject
-/TSAGameProject/Logs
-TSAGameProject/Logs/AssetImportWorker1-prev.log
+*.log
