@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scriptsorsmth\Game.cs" />
     <Compile Include="Assets\Scriptsorsmth\PlayerControllerRB2D.cs" />
     <Compile Include="Assets\Scriptsorsmth\UI_Manager.cs" />
+    <Compile Include="Assets\Scriptsorsmth\BreakableObject.cs" />
     <Compile Include="Assets\Average.cs" />
     <Compile Include="Assets\Scriptsorsmth\Game Config\PlayerConfig.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelManager.cs" />

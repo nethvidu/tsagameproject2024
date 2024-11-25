@@ -12,6 +12,11 @@ public class Level1 : LevelScript
         yield return 0;
     }
 
+    public override IEnumerator StartLevel()
+    {
+        yield return 0;
+    }
+
     public override IEnumerator TickLevel()
     {
         while (!GameOver)

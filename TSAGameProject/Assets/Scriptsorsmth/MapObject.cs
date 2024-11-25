@@ -4,6 +4,7 @@ using System.ComponentModel;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 
@@ -17,6 +18,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
 
     public enum InteractableType {
         Door,
+        Lever,
         Button,
         None
     }
@@ -102,9 +104,18 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     // Invoke action once is interacted with
     private void Invoke(PlayerControllerRB2D player)
     {
+        if (isSingleUse)
+        {
+            isInteractable = false;
+            RadialProgress.transform.localScale = Vector3.zero;
+            Destroy(GetComponentInChildren<Light2D>());
+        }
+        FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
         switch (interactableType) { 
             case InteractableType.None:
-                FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+                break;
+            case InteractableType.Lever:
+                transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1, 1, 1));
                 break;
 
         }
@@ -176,7 +187,6 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
 
             RadialProgress.transform.Find("Center").transform.Find("Fill").GetComponent<InverseMask>().fillAmount = currentInteractPercentage;
         }
-
         isCollidable = isCollidableEditor;
     }
 }

@@ -14,6 +14,8 @@ public abstract class LevelScript : MonoBehaviour
     public abstract IEnumerator LevelEnd();
     public abstract IEnumerator TickLevel();
 
+    public abstract IEnumerator StartLevel();
+
     public void Start()
     {
         foreach (string flag in flags)
@@ -31,7 +33,7 @@ public abstract class LevelScript : MonoBehaviour
     public void triggerFlag(string flag)
     {
         try {
-            actualFlags[flag] = true;
+            actualFlags[flag] = !actualFlags[flag];
         }
         catch
         {
@@ -44,7 +46,7 @@ public abstract class LevelScript : MonoBehaviour
         {
             foreach(string f in flag)
             {
-                actualFlags[f] = true;
+                actualFlags[f] = !actualFlags[f];
             }
         }
         catch

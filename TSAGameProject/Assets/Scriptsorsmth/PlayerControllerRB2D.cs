@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -140,6 +141,22 @@ public class PlayerControllerRB2D : MonoBehaviour
         Velocity = Mathf.Sqrt(rb2D.velocity.x * rb2D.velocity.x + rb2D.velocity.y * rb2D.velocity.y); // Update velocity PROPERTY
         isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, groundLayer);
         AnimateAvatar();
+    }
+
+    void Update()
+    {
+        
+        if (isDashing && transform.name == "Player2")
+        {
+            RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, new Vector3(direction, 0, 0), 0.5f);
+            hit.ToList().ForEach(delegate(RaycastHit2D a)
+            {
+                if (a.collider.GetComponent<BreakableObject>() != null)
+                {
+                    a.collider.GetComponent<BreakableObject>().Break();
+                }
+            });
+        }
     }
     void AnimateAvatar()
     {
