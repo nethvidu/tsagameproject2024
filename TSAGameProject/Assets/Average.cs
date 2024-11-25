@@ -26,16 +26,8 @@ public class Average: MonoBehaviour
             distance = Vector2.Distance(objectA.position, objectB.position);
 
             // Place the target object at the midpoint
-            transform.position = averagePosition;
-            if(distance > 8){
-                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, (distance-currentSize), Time.deltaTime * 2);
-                if(distance > 15) {
-                    Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize, Time.deltaTime * 2);
-                }
-            } 
-            else {
-                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize, Time.deltaTime * 2);
-            }
+            transform.position = averagePosition + new Vector3(0,1,0);
+            Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/3+(distance/1.5f), Time.deltaTime * 2);
         }
     }
 }
