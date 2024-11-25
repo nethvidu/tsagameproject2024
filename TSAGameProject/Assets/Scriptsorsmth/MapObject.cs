@@ -142,7 +142,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
         if (isInteractable)
         {
             RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
-            RadialProgress.layer = 100;
+            RadialProgress.layer = 1;
             if (interactPlayer == PlayerToInteract.Player1) {
                 RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "DOWN";
                 float dist = Vector3.Distance(transform.position, players[0].transform.position);
@@ -159,6 +159,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             }
             else
             {
+                RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
                 RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "S";
                 float dist = Vector3.Distance(transform.position, players[1].transform.position);
                 RadialProgress.transform.localScale = Vector3.zero;
