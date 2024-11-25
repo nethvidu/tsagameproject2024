@@ -41,3 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: MapBg
+    uniqueID: 2204768179
+    locked: 0
+  - name: MapObj
+    uniqueID: 1515056455
+    locked: 0
+  - name: Char
+    uniqueID: 2245293451
+    locked: 0
+  - name: UI
+    uniqueID: 2452727415
+    locked: 0

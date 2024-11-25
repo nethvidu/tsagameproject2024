@@ -141,7 +141,8 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     {
         if (isInteractable)
         {
-            RadialProgress.transform.position = new Vector3(transform.position.x, transform.position.y, 0f);
+            RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
+            RadialProgress.layer = 100;
             if (interactPlayer == PlayerToInteract.Player1) {
                 RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "DOWN";
                 float dist = Vector3.Distance(transform.position, players[0].transform.position);
