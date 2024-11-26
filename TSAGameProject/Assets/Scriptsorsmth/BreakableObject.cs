@@ -24,6 +24,7 @@ public class BreakableObject : MapObject
             GetComponent<ParticleSystemRenderer>().material = mat;
             GetComponent<ParticleSystem>().Play();
             GetComponent<SpriteRenderer>().enabled = false;
+            FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
         }
     }
 }

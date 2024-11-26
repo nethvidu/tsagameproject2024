@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -54,6 +55,8 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     [Tooltip("Set to -1 to trigger nothing; otherwise will trigger flags in level")]
     [field: SerializeField]
     public string[] triggerFlag { get; set; }
+
+    private object[] internalFlags = new object[16];
     [field: SerializeField]
     public bool isCollidable
     {   
@@ -121,6 +124,34 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
         }
     }
 
+    public void PublicInvoke(bool onlyOnce = false)
+    {
+        if (internalFlags[15] == null)
+        {
+            internalFlags[15] = false;
+        }
+        if (!(bool)internalFlags[15])
+        {
+            switch (interactableType)
+            {
+                case InteractableType.Door:
+                    if (internalFlags[0] == null)
+                    {
+                        internalFlags[0] = false;
+                    }
+                    internalFlags[0] = !(bool)internalFlags[0];
+                    internalFlags[1] = transform.position.y;
+                    print(internalFlags[1]);
+                    break;
+            }
+        }
+        if (onlyOnce)
+        {
+            internalFlags[15] = true;
+        }
+
+    }
+
     void FixedUpdate()
     {
         currentInteractPercentage = Mathf.Clamp(currentInteractPercentage, 0f, 1f);
@@ -166,7 +197,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
                     {
                         Interact(players[0]);
                     }
-                }           
+                }
             }
             else
             {
@@ -186,6 +217,24 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             }
 
             RadialProgress.transform.Find("Center").transform.Find("Fill").GetComponent<InverseMask>().fillAmount = currentInteractPercentage;
+        }
+
+        if (interactableType == InteractableType.Door && internalFlags[0] != null)
+        {
+            if ((bool)internalFlags[0])
+            {
+                if (transform.position.y < (float)internalFlags[1] + 1.4f)
+                {
+                    transform.position += new Vector3(0f, Time.deltaTime, 0f);
+                }
+            }
+            if (!(bool)internalFlags[0]) {
+                if (transform.position.y > (float)internalFlags[1])
+                {
+                    transform.position -= new Vector3(0f, Time.deltaTime, 0f);
+                } 
+            }
+            transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, (float)internalFlags[1], (float)internalFlags[1] + 1.4f), transform.position.z);
         }
         isCollidable = isCollidableEditor;
     }
