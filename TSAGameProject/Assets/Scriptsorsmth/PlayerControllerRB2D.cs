@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class PlayerControllerRB2D : MonoBehaviour
@@ -152,12 +153,13 @@ public class PlayerControllerRB2D : MonoBehaviour
         
         if (isDashing && transform.name == "Player2")
         {
-            RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, new Vector3(direction, 0, 0), 0.5f);
-            hit.ToList().ForEach(delegate(RaycastHit2D a)
+ 
+            Collider2D[] a = Physics2D.OverlapBoxAll(transform.position + new Vector3(direction * 0.5f, 0f , 0f), new Vector2(0.5f, 1.2f), 35);
+            a.ToList().ForEach(delegate(Collider2D a)
             {
-                if (a.collider.GetComponent<BreakableObject>() != null)
+                if (a.GetComponent<BreakableObject>() != null)
                 {
-                    a.collider.GetComponent<BreakableObject>().Break();
+                    a.GetComponent<BreakableObject>().Break();
                 }
             });
         }

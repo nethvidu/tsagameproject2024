@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
     public int loadMap(Map map, bool overridePlayerCamBounds = true)
     {
         GameObject boundsTransform = Instantiate(map.GetComponentInChildren<CompositeCollider2D>().gameObject);
-        boundsTransform.transform.parent = transform;
+        boundsTransform.transform.SetParent(transform, true);
         if (overridePlayerCamBounds)
         {
             GameObject.Find("Player1Cam").GetComponent<CinemachineConfiner>().m_BoundingShape2D = boundsTransform.GetComponent<CompositeCollider2D>();
@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour
             foreach (GameObject gameObject in map.getAllMapObjects())
             {
                 GameObject newGameObject = Instantiate(gameObject);
-                newGameObject.transform.parent = boundsTransform.transform;
+                newGameObject.transform.SetParent(boundsTransform.transform, true);
                 try
                 {
                     newGameObject.GetComponent<MapObject>().isActive = true;
