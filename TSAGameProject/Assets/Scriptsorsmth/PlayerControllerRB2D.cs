@@ -44,13 +44,15 @@ public class PlayerControllerRB2D : MonoBehaviour
     public float Velocity { get; private set; } // Can only be set by this class
     public GameObject Avatar;
     public ParticleSystem dust;
+    public ParticleSystem Dash;
     [field: SerializeField]
     public string LeftRight;
     [field: SerializeField]
     public string JumpControl;
 
-    // Flags for dashing
     [field: SerializeField]
+    // Flags for dashing
+    
     private bool press1 = false;
     [field: SerializeField]
     private int direction;
@@ -59,6 +61,7 @@ public class PlayerControllerRB2D : MonoBehaviour
     [field: SerializeField]
     private bool isLetGo;
     private float dashTime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -103,6 +106,7 @@ public class PlayerControllerRB2D : MonoBehaviour
             isDashing = true;
             press1 = false;
             isLetGo=false;
+            CreateDash();
         }
         else if (press1Time + PlayerConfig.dashInputWindow < Time.time)
         {
@@ -136,7 +140,7 @@ public class PlayerControllerRB2D : MonoBehaviour
             fall = false;
         }
         rb2D.velocity = isDashing ? 
-            new Vector2(Mathf.Clamp(rb2D.velocity.x + horizontalMove, -Max_Speed - DashForce, Max_Speed + DashForce) * 0.955f, rb2D.velocity.y):
+            new Vector2(Mathf.Clamp(rb2D.velocity.x + horizontalMove, -Max_Speed - DashForce, Max_Speed + DashForce) * 0.955f, 0):
             new Vector2(Mathf.Clamp(rb2D.velocity.x + horizontalMove, -Max_Speed, Max_Speed)*0.955f, rb2D.velocity.y); // Set rigidbody velocity
         Velocity = Mathf.Sqrt(rb2D.velocity.x * rb2D.velocity.x + rb2D.velocity.y * rb2D.velocity.y); // Update velocity PROPERTY
         isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, groundLayer);
@@ -158,11 +162,13 @@ public class PlayerControllerRB2D : MonoBehaviour
             });
         }
     }
+    
     void AnimateAvatar()
     {
         animator.SetFloat("Speed", Mathf.Abs(horizontalInput * rb2D.velocity.x)); ;
         animator.SetBool("Jump", Jump);
         animator.SetBool("Fall", fall);
+        animator.SetBool("Dash", isDashing);
         if(horizontalInput > 0) {
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x),transform.localScale.y,2);
             
@@ -175,5 +181,9 @@ public class PlayerControllerRB2D : MonoBehaviour
     void CreateDust()
     {
         dust.Play();
+    }
+    void CreateDash()
+    {
+        Dash.Play();
     }
 }
