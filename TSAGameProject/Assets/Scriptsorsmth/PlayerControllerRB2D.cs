@@ -92,12 +92,12 @@ public class PlayerControllerRB2D : MonoBehaviour
         {
             jump = false;
             fall = false;
-            dashCount = 0;
+            dashCount = 4;
         }
-        if (isDashing && Time.time-lastTime >= 0.2f){
-            rb2D.velocity = rb2D.velocity * 0.2f;
-            rb2D.gravityScale = 1;
-            transform.eulerAngles = new Vector3(0, 0, 0);
+        if (isDashing && Time.time-lastTime >= 0.2f){ // 0.2 is dash length, fix later
+            rb2D.velocity = rb2D.velocity * 0.2f; //Slow player at end of dash
+            rb2D.gravityScale = 1; //reset gravity
+            transform.eulerAngles = new Vector3(0, 0, 0); //reset rotation
             if(direction == 1) {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x),transform.localScale.y,2);
             }
@@ -111,9 +111,9 @@ public class PlayerControllerRB2D : MonoBehaviour
             {
                 if (isGrounded && lastMove.y > 0  && !(jump || fall))
                 {
-                    lastMove = new Vector2(0, 0);
                     rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + 10);
                     jump = true;
+                    dashCount = 0;
                 } else if(!isGrounded && (jump || fall) && dashCount < 3) {
                     isDashing = true;
                     rb2D.velocity = new Vector2(0, 0);
@@ -185,7 +185,7 @@ public class PlayerControllerRB2D : MonoBehaviour
         dashCount++;
         rb2D.gravityScale = 0;
         sign = Vector2.Angle(Vector2.up, lastMove);
-        rb2D.velocity = (rb2D.velocity + lastMove*10);
+        rb2D.velocity = (rb2D.velocity + lastMove*10);// * 10 is dash force, fix later
 
         
     }
