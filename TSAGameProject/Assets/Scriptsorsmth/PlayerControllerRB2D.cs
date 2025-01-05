@@ -92,10 +92,11 @@ public class PlayerControllerRB2D : MonoBehaviour
         {
             jump = false;
             fall = false;
+            dashCount = 0;
         }
         if (isDashing && Time.time-lastTime >= 0.2f){
             rb2D.velocity = rb2D.velocity * 0.2f;
-            rb2D.gravityScale = 2;
+            rb2D.gravityScale = 1;
             transform.eulerAngles = new Vector3(0, 0, 0);
             if(direction == 1) {
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x),transform.localScale.y,2);
@@ -108,11 +109,19 @@ public class PlayerControllerRB2D : MonoBehaviour
         if(hit.collider != null && (movePress != "") || (movePress != null)){
             if (movePress == "Tap" && !isDashing)
             {
-                isDashing = true;
-                rb2D.velocity = new Vector2(0, 0);
-                Dash();
-                lastTime = Time.time;
-                movePress = "";
+                if (isGrounded && lastMove.y > 0  && !(jump || fall))
+                {
+                    lastMove = new Vector2(0, 0);
+                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + 10);
+                    jump = true;
+                } else if(!isGrounded && (jump || fall) && dashCount < 3) {
+                    isDashing = true;
+                    rb2D.velocity = new Vector2(0, 0);
+                    Dash();
+                    lastMove = new Vector2(0, 0);
+                    lastTime = Time.time;
+                    movePress = "";
+                }
                 
             }
             else if (movePress == "Hold" && !isDashing)
@@ -175,11 +184,7 @@ public class PlayerControllerRB2D : MonoBehaviour
         Debug.Log("Dash you fool");
         dashCount++;
         rb2D.gravityScale = 0;
-        if(Vector2.Angle(Vector2.right, lastMove) < 90){
-            transform.eulerAngles = new Vector3(0, 0, Vector2.Angle(Vector2.right, lastMove));
-        } else {
-            transform.eulerAngles = new Vector3(0, 0, Vector2.Angle(-Vector2.right, lastMove));
-        }
+        sign = Vector2.Angle(Vector2.up, lastMove);
         rb2D.velocity = (rb2D.velocity + lastMove*10);
 
         
