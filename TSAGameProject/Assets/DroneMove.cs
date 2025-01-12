@@ -21,29 +21,41 @@ public class DroneMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.position += new Vector3(0, Mathf.Sin(Time.time*1f)*0.001f, 0);
+
         CheckMovement();
-        Idle();
+        if(Player1.rb2D.velocity.magnitude < 1 && Player2.rb2D.velocity.magnitude < 1){
+            transform.position += new Vector3(0, Mathf.Sin(Time.time*1f)*0.005f, 0);
+        } else {
+            Idle();
+        }
+        transform.position = Vector2.Lerp(transform.position, finalLocation, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime));
+        
     }
     void CheckMovement()
     {
         if(Player1.rb2D.velocity.magnitude > 1){
             playerOfInterest = 0;
-            Speed = Player1.rb2D.velocity.magnitude * 20;
+            Speed = Player1.rb2D.velocity.magnitude * 10;
         } else if(Player2.rb2D.velocity.magnitude > 1){
             playerOfInterest = 1;
-            Speed = Player2.rb2D.velocity.magnitude * 20;
+            Speed = Player2.rb2D.velocity.magnitude * 10;
         } else {
-            Speed = 0;
+            Speed = 10;
         }
     }
     void Idle() 
     {
         
         Vector2 point;
-        float angle = Random.Range(0, 360);
+        float angle = Random.Range(0, 180);
         Vector2 angleVector = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
         RaycastHit2D hit = Physics2D.Raycast(location, angleVector, 5, ground);
+        if(Vector2.Distance(location, transform.position) <= 2){
+            angle = Random.Range(0, 180);
+            angleVector = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
+            hit = Physics2D.Raycast(location, angleVector, 5, ground);
+            point = location + angleVector * 3;
+        }
         if(hit){
             point = hit.point + hit.normal * 3;
         } else {
@@ -57,7 +69,6 @@ public class DroneMove : MonoBehaviour
         if(Random.Range(1, 30) == 1){
            finalLocation = point;
         }
-        transform.position = Vector2.Lerp(transform.position, finalLocation, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime));
 
     }
 }
