@@ -166,10 +166,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: upheavtt SDF
+  m_Name: Hologram
   m_EditorClassIdentifier: 
   hashCode: -928235602
-  material: {fileID: 2100000, guid: 5f035bfeee58bea459ee4cda7b3d373a, type: 2}
+  material: {fileID: -3221925217480517928}
   materialHashCode: 635911118
   m_Version: 1.1.0
   m_SourceFontFileGUID: 7ba35ec810454594a9f26943242d464f
