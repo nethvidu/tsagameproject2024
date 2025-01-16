@@ -12,10 +12,13 @@ public class DroneMove : MonoBehaviour
     Vector2 location;
     public Vector2 finalLocation = new Vector2(0, 0);
     public float Speed = 0;
+
+    public Transform textLocation;
+    public Vector2 textTargetLocation;
     void Start()
     {
         playerOfInterest = Random.Range(0,1);
-            
+        textLocation = GetComponentsInChildren<RectTransform>()[1];
     }
 
     // Update is called once per frame
@@ -29,6 +32,7 @@ public class DroneMove : MonoBehaviour
             Idle();
         }
         transform.position = Vector2.Lerp(transform.position, finalLocation, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime));
+        TextMove();
         
     }
     void CheckMovement()
@@ -36,8 +40,10 @@ public class DroneMove : MonoBehaviour
         if(Player1.rb2D.velocity.magnitude > 1){
             playerOfInterest = 0;
             Speed = Player1.rb2D.velocity.magnitude * 10;
+            location = Player1.transform.position;
         } else if(Player2.rb2D.velocity.magnitude > 1){
             playerOfInterest = 1;
+            location = Player2.transform.position;
             Speed = Player2.rb2D.velocity.magnitude * 10;
         } else {
             Speed = 10;
@@ -50,7 +56,7 @@ public class DroneMove : MonoBehaviour
         float angle = Random.Range(0, 180);
         Vector2 angleVector = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
         RaycastHit2D hit = Physics2D.Raycast(location, angleVector, 5, ground);
-        if(Vector2.Distance(location, transform.position) <= 2){
+        if(Vector2.Distance(location, transform.position) >= 2){
             angle = Random.Range(0, 180);
             angleVector = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
             hit = Physics2D.Raycast(location, angleVector, 5, ground);
@@ -61,14 +67,25 @@ public class DroneMove : MonoBehaviour
         } else {
             point = location + angleVector * 3;
         }
-        if(playerOfInterest == 0){
-            location = Player1.transform.position;
-        } else if(playerOfInterest == 1){
-            location = Player2.transform.position;
-        }
         if(Random.Range(1, 30) == 1){
            finalLocation = point;
         }
 
     }
+    void TextMove() 
+    {
+        Vector2 point;
+        float angle = Random.Range(0, 360);
+        Vector2 angleVector = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
+        RaycastHit2D hit = Physics2D.Raycast(finalLocation, angleVector, 2, ground);
+        if(hit){
+            point = hit.point + hit.normal * 2;
+        } else {
+            point = new Vector2(transform.position.x,transform.position.y) + angleVector * 2;
+        }
+        if(Physics2D.OverlapCircle(point, 3.0f, ground)){
+            angle = Random.Range(0, 360);
+        }
+        textLocation.position = Vector2.Lerp(textLocation.position, point, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime));
+    }    
 }
