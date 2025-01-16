@@ -24,7 +24,7 @@ public class PlayerControllerRB2D : MonoBehaviour
     [field: SerializeField] 
     private float Max_Speed = 0.1f;
     [field: SerializeField]
-    private Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
     public Animator animator;
     [field: SerializeField] 
     public bool fall;
