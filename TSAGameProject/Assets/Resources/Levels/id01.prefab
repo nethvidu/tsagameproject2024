@@ -31221,6 +31221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535832976309827861}
   - component: {fileID: 63646035194365836}
+  - component: {fileID: 5531530026778036858}
   m_Layer: 0
   m_Name: Light 2D
   m_TagString: Untagged
@@ -31293,3 +31294,25 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &5531530026778036858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8914627714018195531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 0
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  <interactableType>k__BackingField: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []

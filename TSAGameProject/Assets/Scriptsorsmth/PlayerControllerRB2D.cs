@@ -47,9 +47,11 @@ public class PlayerControllerRB2D : MonoBehaviour
     InputAction jumpAction;
     InputAction moveAction;
     private string movePress = "";
-    public float lastTime;
+    public float lastTime = 0f;
     public float sign;
     public int dashCount = 0;
+    public int tapCount = 0;
+    public float timeLastPress = 0f;
     public Vector2 lastMove = new Vector2(0,0);
 
     // Start is called before the first frame update
@@ -91,8 +93,10 @@ public class PlayerControllerRB2D : MonoBehaviour
         if(isGrounded && !jump)
         {
             jump = false;
+            if(!isDashing){
+                dashCount = 0;
+            }
             fall = false;
-            dashCount = 4;
         }
         if (isDashing && Time.time-lastTime >= 0.2f){ // 0.2 is dash length, fix later
             rb2D.velocity = rb2D.velocity * 0.2f; //Slow player at end of dash
@@ -105,24 +109,28 @@ public class PlayerControllerRB2D : MonoBehaviour
                 transform.localScale = new Vector3(-(Mathf.Abs(transform.localScale.x)),transform.localScale.y,2);
             }
             isDashing = false;
+            
         }
         if(hit.collider != null && (movePress != "") || (movePress != null)){
             if (movePress == "Tap" && !isDashing)
             {
-                if (isGrounded && lastMove.y > 0  && !(jump || fall))
+                tapCount++;
+                if(tapCount == 1){
+                    timeLastPress = Time.time;
+                }
+                
+
+                if (isGrounded && lastMove.y > 0  && !(jump))
                 {
                     rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + 10);
                     jump = true;
                     dashCount = 0;
-                } else if(!isGrounded && (jump || fall) && dashCount < 3) {
-                    isDashing = true;
-                    rb2D.velocity = new Vector2(0, 0);
-                    Dash();
-                    lastMove = new Vector2(0, 0);
-                    lastTime = Time.time;
                     movePress = "";
+                    tapCount = 0;
+                } else if(dashCount < 3 && tapCount > 1) {
+                    Dash();
                 }
-                
+                movePress = "";
             }
             else if (movePress == "Hold" && !isDashing)
             {
@@ -136,6 +144,9 @@ public class PlayerControllerRB2D : MonoBehaviour
                 }
             }
         }
+        if(Time.time - timeLastPress >= 0.2f && tapCount >= 1){
+            tapCount = 0;
+        } 
         isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, ground);
         AnimateAvatar();
     }
@@ -180,13 +191,17 @@ public class PlayerControllerRB2D : MonoBehaviour
     }
     void Dash()
     {
-        
+        isDashing = true;
+        rb2D.velocity = new Vector2(0, 0);
         Debug.Log("Dash you fool");
         dashCount++;
         rb2D.gravityScale = 0;
         sign = Vector2.Angle(Vector2.up, lastMove);
         rb2D.velocity = (rb2D.velocity + lastMove*10);// * 10 is dash force, fix later
-
+        lastMove = new Vector2(0, 0);
+        lastTime = Time.time;
+        movePress = "";
+        tapCount = 0;
         
     }
 }

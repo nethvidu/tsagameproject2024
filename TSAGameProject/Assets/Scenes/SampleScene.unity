@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.790695
+    OrthographicSize: 1.726325
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1422,7 +1422,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.790695
+  orthographic size: 1.726325
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6926,7 +6926,6 @@ Transform:
   - {fileID: 8173120879816865559}
   - {fileID: 528863180}
   - {fileID: 1059648265}
-  - {fileID: 1619612377}
   m_Father: {fileID: 2100110457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &953288115
@@ -6965,6 +6964,8 @@ MonoBehaviour:
   lastTime: 0
   sign: 0
   dashCount: 0
+  tapCount: 0
+  timeLastPress: 0
   lastMove: {x: 0, y: 0}
 --- !u!70 &953288116
 CapsuleCollider2D:
@@ -7094,7 +7095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5363a434f765e4a89473fec6c46e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 1
+  Level: 2
   players:
   - {fileID: 953288115}
   - {fileID: 1742266720}
@@ -12635,11 +12636,11 @@ Transform:
   m_GameObject: {fileID: 1619612376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.79347765, y: -0.7060025, z: -10.02966}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 953288114}
+  m_Father: {fileID: 2100110457}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1619612378
 MonoBehaviour:
@@ -12842,6 +12843,8 @@ MonoBehaviour:
   lastTime: 0
   sign: 0
   dashCount: 0
+  tapCount: 0
+  timeLastPress: 0
   lastMove: {x: 0, y: 0}
 --- !u!50 &1742266721
 Rigidbody2D:
@@ -13188,6 +13191,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 107251783}
+  - {fileID: 1619612377}
   - {fileID: 953288114}
   - {fileID: 519420032}
   - {fileID: 50145354}

@@ -40,5 +40,10 @@ public class Game : MonoBehaviour
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
     }
+    public void loadNewLevel(Levels.Level levelToLoad)
+    {
+        lvlMgr.loadMap(lvlMgr.getReferenceToLevel(levelToLoad));
+        this.startLevel(lvlMgr);
+    }
 }
  
