@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
-using UnityEditor.Timeline;
+// using UnityEditor.Timeline;
 using UnityEngine;
 using UnityEngine.InputSystem; 
 using UnityEngine.InputSystem.Interactions;
@@ -44,6 +44,7 @@ public class PlayerControllerRB2D : MonoBehaviour
     public Vector2 move;
     public string MoveInput;
     public string JumpInput;
+    public float jumpHeight;
     InputAction jumpAction;
     InputAction moveAction;
     private string movePress = "";
@@ -51,12 +52,13 @@ public class PlayerControllerRB2D : MonoBehaviour
     public float sign;
     public int dashLimit;
     public float dashLength;
-    public float jumpHeight;
+    public float dashForce;
 
     private int dashCount = 0;
     private int tapCount = 0;
     private float timeLastPress = 0f;
     public float dashForgiveness;
+    public float dashGravity;
     public Vector2 lastMove = new Vector2(0,0);
 
     // Start is called before the first frame update
@@ -98,9 +100,6 @@ public class PlayerControllerRB2D : MonoBehaviour
         if(isGrounded && !jump)
         {
             jump = false;
-            if(!isDashing){
-                dashCount = 0;
-            }
             fall = false;
         }
         if (isDashing && Time.time-lastTime >= dashLength){ // 0.2 is dash length, fix later
@@ -159,6 +158,7 @@ public class PlayerControllerRB2D : MonoBehaviour
         }
         if(Time.time - timeLastPress >= dashForgiveness && tapCount >= 1){
             tapCount = 0;
+            dashCount = 0;
         } 
         isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, ground);
         AnimateAvatar();
@@ -208,9 +208,9 @@ public class PlayerControllerRB2D : MonoBehaviour
         rb2D.velocity = new Vector2(0, 0);
         Debug.Log("Dash you fool");
         dashCount++;
-        rb2D.gravityScale = 0;
+        rb2D.gravityScale = dashGravity;
         sign = Vector2.Angle(Vector2.up, lastMove);
-        rb2D.velocity = (rb2D.velocity + lastMove*10);// * 10 is dash force, fix later
+        rb2D.velocity = (rb2D.velocity + lastMove*dashForce);// * 10 is dash force, fix later
         lastMove = new Vector2(0, 0);
         lastTime = Time.time;
         movePress = "";
