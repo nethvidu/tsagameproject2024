@@ -49,9 +49,14 @@ public class PlayerControllerRB2D : MonoBehaviour
     private string movePress = "";
     public float lastTime = 0f;
     public float sign;
-    public int dashCount = 0;
-    public int tapCount = 0;
-    public float timeLastPress = 0f;
+    public int dashLimit;
+    public float dashLength;
+    public float jumpHeight;
+
+    private int dashCount = 0;
+    private int tapCount = 0;
+    private float timeLastPress = 0f;
+    public float dashForgiveness;
     public Vector2 lastMove = new Vector2(0,0);
 
     // Start is called before the first frame update
@@ -98,7 +103,7 @@ public class PlayerControllerRB2D : MonoBehaviour
             }
             fall = false;
         }
-        if (isDashing && Time.time-lastTime >= 0.2f){ // 0.2 is dash length, fix later
+        if (isDashing && Time.time-lastTime >= dashLength){ // 0.2 is dash length, fix later
             rb2D.velocity = rb2D.velocity * 0.2f; //Slow player at end of dash
             rb2D.gravityScale = 1; //reset gravity
             transform.eulerAngles = new Vector3(0, 0, 0); //reset rotation
@@ -122,18 +127,26 @@ public class PlayerControllerRB2D : MonoBehaviour
 
                 if (isGrounded && lastMove.y > 0  && !(jump))
                 {
-                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + 10);
+                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + jumpHeight/2);
                     jump = true;
                     dashCount = 0;
                     movePress = "";
                     tapCount = 0;
-                } else if(dashCount < 3 && tapCount > 1) {
+                } else if(dashCount <= dashLimit && tapCount > 1) {
                     Dash();
                 }
                 movePress = "";
             }
             else if (movePress == "Hold" && !isDashing)
             {
+                 if (isGrounded && lastMove.y > 0  && !(jump))
+                {
+                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + jumpHeight);
+                    jump = true;
+                    dashCount = 0;
+                    movePress = "";
+                    tapCount = 0;
+                }
                 if (Mathf.Abs(rb2D.velocity.x) <= Max_Speed && Mathf.Abs(move.x) > 0)
                 {
                     rb2D.AddForce(Vector3.ProjectOnPlane(Vector2.right, hit.normal) * (move.x * Accel), ForceMode2D.Impulse);
@@ -144,7 +157,7 @@ public class PlayerControllerRB2D : MonoBehaviour
                 }
             }
         }
-        if(Time.time - timeLastPress >= 0.2f && tapCount >= 1){
+        if(Time.time - timeLastPress >= dashForgiveness && tapCount >= 1){
             tapCount = 0;
         } 
         isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, ground);

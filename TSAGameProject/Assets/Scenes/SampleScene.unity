@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 1.726325
+    OrthographicSize: 6.368268
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1422,7 +1422,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.726325
+  orthographic size: 6.368268
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6846,7 +6846,7 @@ Rigidbody2D:
   m_Mass: 1.75
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -6963,9 +6963,10 @@ MonoBehaviour:
   JumpInput: Jump
   lastTime: 0
   sign: 0
-  dashCount: 0
-  tapCount: 0
-  timeLastPress: 0
+  dashLimit: 0
+  dashLength: 0.2
+  jumpHeight: 5
+  dashForgiveness: 0.2
   lastMove: {x: 0, y: 0}
 --- !u!70 &953288116
 CapsuleCollider2D:
@@ -12842,9 +12843,10 @@ MonoBehaviour:
   JumpInput: Jump
   lastTime: 0
   sign: 0
-  dashCount: 0
-  tapCount: 0
-  timeLastPress: 0
+  dashLimit: 0
+  dashLength: 0
+  jumpHeight: 0
+  dashForgiveness: 0
   lastMove: {x: 0, y: 0}
 --- !u!50 &1742266721
 Rigidbody2D:
