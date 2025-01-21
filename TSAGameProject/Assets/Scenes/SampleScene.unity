@@ -7062,6 +7062,8 @@ MonoBehaviour:
   sign: 0
   dashCount: 0
   lastMove: {x: 0, y: 0}
+  onMovingPlatform: 0
+  movingPlatformRelVel: {x: 0, y: 0}
 --- !u!70 &953288116
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -12939,6 +12941,8 @@ MonoBehaviour:
   sign: 0
   dashCount: 0
   lastMove: {x: 0, y: 0}
+  onMovingPlatform: 0
+  movingPlatformRelVel: {x: 0, y: 0}
 --- !u!50 &1742266721
 Rigidbody2D:
   serializedVersion: 4
