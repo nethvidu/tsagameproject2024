@@ -18,7 +18,7 @@ public class DroneMove : MonoBehaviour
     void Start()
     {
         playerOfInterest = Random.Range(0,1);
-        textLocation = GetComponentsInChildren<RectTransform>()[1];
+        textLocation = GameObject.Find("DroneText").transform;
     }
 
     // Update is called once per frame
@@ -74,6 +74,7 @@ public class DroneMove : MonoBehaviour
     }
     void TextMove() 
     {
+       
         Vector2 point;
         float angle = Random.Range(0, 360);
         Vector2 angleVector = new Vector2(Mathf.Sin(angle * Mathf.Deg2Rad), Mathf.Cos(angle * Mathf.Deg2Rad));
@@ -86,6 +87,8 @@ public class DroneMove : MonoBehaviour
         if(Physics2D.OverlapCircle(point, 3.0f, ground)){
             angle = Random.Range(0, 360);
         }
-        textLocation.position = Vector2.Lerp(textLocation.position, point, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime));
+        textLocation.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint((Vector2.Lerp(transform.position, point, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime) / 6f)) - new Vector2(0, 0.6f));
+
+
     }    
 }

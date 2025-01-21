@@ -45,5 +45,10 @@ public class Game : MonoBehaviour
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(levelToLoad));
         this.startLevel(lvlMgr);
     }
+
+    void levelClear()
+    {
+
+    }
 }
  

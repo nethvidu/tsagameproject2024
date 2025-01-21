@@ -2,25 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
+using MyBox;
 
 public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITHIN THE MAP HIERARCHY
 {
+    private readonly bool isMoving = false;
     public enum PlayerToInteract
     {
         Player1,
-        Player2
+        Player2,
+        Both
     }
 
     public enum InteractableType {
         Door,
         Lever,
         Button,
+        PressurePlate,
+        Freebody,
+        Pickup,
         None
     }
     [SerializeField]
@@ -40,7 +47,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     [field: SerializeField]
     public bool isInteractable { get; set; }
     [field: SerializeField]
-    public InteractableType interactableType { get; set; }
+    public InteractableType interactableType;
     [Tooltip("Only this player can use this interactable")]
     [field: SerializeField]
     public PlayerToInteract interactPlayer { get; set; }
@@ -57,6 +64,22 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     public string[] triggerFlag { get; set; }
 
     private object[] internalFlags = new object[16];
+
+    [Header("Settings")]
+
+    [ConditionalField("interactableType", false, InteractableType.PressurePlate)]
+    public float PressurePlateActuationMass = 0;
+
+
+    [ConditionalField("interactableType", false, InteractableType.Freebody)]
+    public float FreebodyMass = 0;
+
+
+    [ConditionalField("interactableType", false, InteractableType.Pickup)]
+    public GameObject PickupObject;
+
+
+
     [field: SerializeField]
     public bool isCollidable
     {   
@@ -68,6 +91,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
                 if (value)
                 {
                     GetComponent<BoxCollider2D>().size = originalColliderSize;
+
                 }
             }
             catch
@@ -158,7 +182,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
         if (!isInteracting && isInteractable && interactTime != 0)
         {
             currentInteractPercentage -= Time.fixedDeltaTime / interactTime * 2f; // Decays twice as quick
-        }
+        }   
     }
 
     void Start()
@@ -168,15 +192,17 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             originalColliderSize = GetComponent<BoxCollider2D>().size;
         }
         catch { }
-        
         isCollidable = true; 
         if (isInteractable)
         {
             RadialProgress = Instantiate(FindObjectOfType<UI_Manager>().getElementGameObjectByName("RadialProgress"), FindObjectOfType<UI_Manager>().transform);
             RadialProgress.transform.position = this.transform.position;
         }
-        
+        onStart();
     }
+
+    
+    public virtual void onStart() { }
 
     // Update is called once per frame
     void Update()
