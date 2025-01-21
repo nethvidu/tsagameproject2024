@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Splines;
 using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    public Levels.Level Level = Levels.Level.id01; //Placeholder
+    public Levels.Level Level = Levels.Level.id03; //Placeholder
     private LevelManager lvlMgr;
     public PlayerControllerRB2D[] players;
     public UI_Manager UIManager;
@@ -37,6 +38,9 @@ public class Game : MonoBehaviour
      
     void startLevel(LevelManager mgr)
     {
+        transform.parent.GetComponentInChildren<LevelScript>().LevelStart();
+        FindObjectOfType<DroneMove>().GetComponent<SplineAnimate>().Container = GameObject.Find("DronePath(Clone)").GetComponent<SplineContainer>();
+        FindObjectOfType<DroneMove>().GetComponent<SplineAnimate>().Play();
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
     }

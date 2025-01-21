@@ -307,7 +307,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 1
   <interactPlayer>k__BackingField: 1
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -315,3 +315,6 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever2
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}

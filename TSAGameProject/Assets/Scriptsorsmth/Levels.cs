@@ -9,8 +9,8 @@ public class Levels : MonoBehaviour
     {
        id00_tutorial, 
        id01,
-       id02
-       
+       id02,
+       id03
     };
 
     // Start is called before the first frame update

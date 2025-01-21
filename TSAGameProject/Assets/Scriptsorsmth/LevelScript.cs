@@ -10,18 +10,22 @@ public abstract class LevelScript : MonoBehaviour
     [property: SerializeField]
     public abstract string[] flags { get; set; }
 
+    [field: SerializeField]
     public Dictionary<string, bool> actualFlags = new Dictionary<string, bool>();
     public abstract IEnumerator LevelEnd();
     public abstract IEnumerator TickLevel();
 
-    public abstract IEnumerator StartLevel();
+    public abstract IEnumerator onLevelStart();
 
-    public void Start()
+
+    public void LevelStart()
     {
+        actualFlags.Clear();
         foreach (string flag in flags)
         {
             actualFlags.Add(flag, false);
         }
+        StartCoroutine(onLevelStart());
     }
 
     public bool checkFlag(string flag)
@@ -37,7 +41,7 @@ public abstract class LevelScript : MonoBehaviour
         }
         catch
         {
-            print("Flag doesn't exist noob!!!");
+            actualFlags.Add(flag, true);
         }
     }
     public void triggerFlag(string[] flag)
@@ -51,7 +55,10 @@ public abstract class LevelScript : MonoBehaviour
         }
         catch
         {
-            print("Flag doesn't exist noob!!!");
+            foreach (string f in flag)
+            {
+                actualFlags.Add(f, true);
+            }
         }
     }
     private bool gameOver;

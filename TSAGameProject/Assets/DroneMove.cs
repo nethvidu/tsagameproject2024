@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class DroneMove : MonoBehaviour
 {
@@ -12,16 +14,22 @@ public class DroneMove : MonoBehaviour
     Vector2 location;
     public Vector2 finalLocation = new Vector2(0, 0);
     public float Speed = 0;
-
-    public Transform textLocation;
+    [field: SerializeField]
+    public float playerRadius { get; set; }
+public Transform textLocation;
     public Vector2 textTargetLocation;
+
+    public Spline dronePathSpline;
+    private float currentSplineIndex = 0;
     void Start()
     {
         playerOfInterest = Random.Range(0,1);
         textLocation = GameObject.Find("DroneText").transform;
     }
+    private GameObject currentNode;
 
     // Update is called once per frame
+    /*
     void FixedUpdate()
     {
 
@@ -34,6 +42,62 @@ public class DroneMove : MonoBehaviour
         transform.position = Vector2.Lerp(transform.position, finalLocation, Mathf.SmoothStep(0.0f, Speed,Time.deltaTime));
         TextMove();
         
+    }
+    */
+    void Update()
+    {
+        print(Physics2D.OverlapCircleAll(transform.position, 0.5f).ToString());
+        splineCheck();
+        Collider2D col = (from c in Physics2D.OverlapCircleAll(transform.position, 0.5f).ToList() where c.gameObject.GetComponent<DronePathNode>() != null select c).FirstOrDefault();
+        if (col != null)
+        {
+            col.gameObject.GetComponent<DronePathNode>().AnimateText();
+        }
+        currentNode = col.gameObject;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        print("Collision");
+        if (collision.gameObject.GetComponent<DronePathNode>() != null)
+        {
+            collision.gameObject.GetComponent<DronePathNode>().AnimateText();
+        }
+    }
+    void splineCheck()
+    {
+        if (!isPlayerWithinRadius())
+        {
+            GetComponent<SplineAnimate>().Pause();
+            return;
+        }
+        try
+        {
+            if (!GetComponent<SplineAnimate>().IsPlaying && !currentNode.GetComponent<DronePathNode>().continueOnCondition)
+            {
+                GetComponent<SplineAnimate>().Play();
+            }
+            else if (currentNode.GetComponent<DronePathNode>().continueOnCondition)
+            {
+                if (FindObjectOfType<LevelScript>().checkFlag(currentNode.GetComponent<DronePathNode>().flagTriggeredBy))
+                {
+                    GetComponent<SplineAnimate>().Play();
+                }
+                else
+                {
+                    GetComponent<SplineAnimate>().Pause();
+                }
+            }
+        }
+        catch
+        {
+            GetComponent<SplineAnimate>().Play();
+        }
+
+    }
+    bool isPlayerWithinRadius()
+    {
+        return Vector2.Distance(Player1.transform.position, transform.position) < playerRadius || Vector2.Distance(Player2.transform.position, transform.position) < playerRadius;
     }
     void CheckMovement()
     {

@@ -60,6 +60,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scriptsorsmth\DronePathNode.cs" />
     <Compile Include="Assets\Scriptsorsmth\IKtargetIdle.cs" />
     <Compile Include="Assets\Scriptsorsmth\MapObject.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelScripts\Level1.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Assets\Scriptsorsmth\MovingMapObject.cs" />
     <Compile Include="Assets\DroneLook.cs" />
     <Compile Include="Assets\Scriptsorsmth\Game Config\PlayerConfig.cs" />
+    <Compile Include="Assets\srip.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelManager.cs" />
     <Compile Include="Assets\DroneMove.cs" />
     <Compile Include="Assets\Scriptsorsmth\InverseMask.cs" />

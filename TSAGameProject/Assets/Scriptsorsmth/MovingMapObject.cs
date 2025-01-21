@@ -28,7 +28,10 @@ public class MovingMapObject : MapObject
 
     [field: SerializeField]
     public bool repeat { get; set; }
-
+    [field: SerializeField]
+    public bool isTriggered = false;
+    [ConditionalField("isTriggered", false)]
+    public string flagTriggeredBy;
     [field: SerializeField]
     public Vector2 Vel { get; set; }
 
@@ -41,6 +44,11 @@ public class MovingMapObject : MapObject
     private Vector3 prevPos;
     public void FixedUpdate()
     {
+        print(FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy));
+        if (isTriggered && !FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy))
+        {
+            return;
+        }
         prevPos = transform.position;
 
         if (movementType == MovementType.Linear)

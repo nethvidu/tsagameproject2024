@@ -434,6 +434,7 @@ GameObject:
   - component: {fileID: 107251784}
   - component: {fileID: 107251787}
   - component: {fileID: 107251788}
+  - component: {fileID: 107251789}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -482,8 +483,22 @@ MonoBehaviour:
   playerOfInterest: 0
   finalLocation: {x: 0, y: 0}
   Speed: 0
+  <playerRadius>k__BackingField: 15
   textLocation: {fileID: 0}
   textTargetLocation: {x: 0, y: 0}
+  dronePathSpline:
+    m_EditModeType: 1
+    m_Knots: []
+    m_MetaData: []
+    m_Closed: 0
+    m_IntData:
+      m_Data: []
+    m_FloatData:
+      m_Data: []
+    m_Float4Data:
+      m_Data: []
+    m_ObjectData:
+      m_Data: []
 --- !u!212 &107251786
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -604,6 +619,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &107251789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107251782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_LoopMode: 1
+  m_Method: 1
+  m_Duration: 1
+  m_MaxSpeed: 1
+  m_EasingMode: 3
+  m_AlignmentMode: 3
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &120985411
 GameObject:
   m_ObjectHideFlags: 0

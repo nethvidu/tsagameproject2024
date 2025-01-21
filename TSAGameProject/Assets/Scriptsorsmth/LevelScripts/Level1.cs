@@ -21,9 +21,10 @@ public class Level1 : LevelScript
         yield break;
     }
 
-    public override IEnumerator StartLevel()
+    public override IEnumerator onLevelStart()
     {
-        yield return 0;
+        this.triggerFlag("dummy");
+        yield break;
     }
 
     public override IEnumerator TickLevel()
@@ -60,4 +61,5 @@ public class Level1 : LevelScript
         }
 
     }
+    
 }
