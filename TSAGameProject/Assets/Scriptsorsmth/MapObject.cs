@@ -10,6 +10,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 using MyBox;
+using System.Linq;
 
 public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITHIN THE MAP HIERARCHY
 {
@@ -65,6 +66,9 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
 
     private object[] internalFlags = new object[16];
 
+    [ConditionalField("interactableType", false, InteractableType.PressurePlate)]
+    private float currMass;
+
     [Header("Settings")]
 
     [ConditionalField("interactableType", false, InteractableType.PressurePlate)]
@@ -77,6 +81,13 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
 
     [ConditionalField("interactableType", false, InteractableType.Pickup)]
     public GameObject PickupObject;
+
+    [ConditionalField("interactableType", false, InteractableType.Door)]
+    public bool DoorIsTriggered;
+
+    [ConditionalField("DoorIsTriggered", false)]
+    public string DoorFlagTriggeredBy;
+
 
 
 
@@ -115,7 +126,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             print("Object is not interactable");
             return;
         }
-        if (interactTime != 0f && currentInteractPercentage <= 1f)
+        if (interactTime != 0f && currentInteractPercentage <= 0.999f)
         {
             currentInteractPercentage += Time.deltaTime / interactTime;
         }
@@ -245,6 +256,10 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             RadialProgress.transform.Find("Center").transform.Find("Fill").GetComponent<InverseMask>().fillAmount = currentInteractPercentage;
         }
 
+        if (interactableType == InteractableType.Door && DoorIsTriggered && GameObject.Find("LevelScript(Clone)").GetComponent<LevelScript>().checkFlag(DoorFlagTriggeredBy))
+        {
+            PublicInvoke(true);
+        }
         if (interactableType == InteractableType.Door && internalFlags[0] != null)
         {
             if ((bool)internalFlags[0])
@@ -263,5 +278,18 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, (float)internalFlags[1], (float)internalFlags[1] + 1.4f), transform.position.z);
         }
         isCollidable = isCollidableEditor;
+
+        if (interactableType == InteractableType.PressurePlate)
+        {
+            if (GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
+            {
+                float totalMass = (from collider in Physics2D.OverlapCircleAll(transform.position, 0.5f, LayerMask.GetMask("ground")) where collider.GetComponent<PlayerControllerRB2D>() != null select collider.GetComponent<Rigidbody2D>().mass).Sum();
+                currMass = totalMass;
+                if (totalMass >= PressurePlateActuationMass)
+                {
+                    FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+                }
+            }
+        }
     }
 }
