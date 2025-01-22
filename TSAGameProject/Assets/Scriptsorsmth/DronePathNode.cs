@@ -21,8 +21,8 @@ public class DronePathNode : MonoBehaviour
     {
         if (hasTriggered) return;
         hasTriggered = true;
-        GameObject.Find("DroneText").GetComponentInChildren<TMP_Text>().text = "";
-       StartCoroutine(animateText());
+        GameObject.Find("Drone").GetComponentInChildren<TMP_Text>().text = "";
+        StartCoroutine(animateText());
     }
 
     private IEnumerator animateText()
@@ -30,7 +30,7 @@ public class DronePathNode : MonoBehaviour
         for (int i = 0; i < Text.Length; i++)
         {
            
-            GameObject.Find("DroneText").GetComponentInChildren<TMP_Text>().text += Text[i];
+            GameObject.Find("Drone").GetComponentInChildren<TMP_Text>().text += Text[i];
             yield return new WaitForSeconds(1f / TextAnimationSpeed);
         }
     }
