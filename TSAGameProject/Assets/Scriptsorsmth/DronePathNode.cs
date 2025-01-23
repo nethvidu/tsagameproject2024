@@ -25,6 +25,7 @@ public class DronePathNode : MonoBehaviour
         StartCoroutine(wait());
         GameObject.Find("DroneText").GetComponentInChildren<TMP_Text>().text = "";
        StartCoroutine(animateText());
+       Destroy(GetComponent<BoxCollider2D>());
     }
 
     private IEnumerator wait()
