@@ -126,7 +126,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             print("Object is not interactable");
             return;
         }
-        if (interactTime != 0f && currentInteractPercentage <= 1f)
+        if (interactTime != 0f && currentInteractPercentage <= 0.9999f)
         {
             currentInteractPercentage += Time.deltaTime / interactTime;
         }
