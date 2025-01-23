@@ -18,6 +18,7 @@ public class DronePathNode : MonoBehaviour
     public bool continueOnPass = false;
     [ConditionalField("continueOnPass", false)]
     
+    
     public PlayerControllerRB2D[] players;
     
     void Start() {
@@ -42,9 +43,9 @@ public class DronePathNode : MonoBehaviour
 
     private IEnumerator animateText()
     {
+        GameObject.Find("Drone").GetComponentInChildren<TMP_Text>().text = "";
         for (int i = 0; i < Text.Length; i++)
         {
-           
             GameObject.Find("Drone").GetComponentInChildren<TMP_Text>().text += Text[i];
             yield return new WaitForSeconds(1f / TextAnimationSpeed);
         }

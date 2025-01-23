@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 41.10897
+    OrthographicSize: 7.593024
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
   m_LoopMode: 1
   m_Method: 1
   m_Duration: 1
-  m_MaxSpeed: 1
+  m_MaxSpeed: 10
   m_EasingMode: 3
   m_AlignmentMode: 3
   m_ObjectForwardAxis: 2
@@ -1460,7 +1460,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 41.10897
+  orthographic size: 7.593024
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -12697,7 +12697,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectA: {fileID: 8173120879816865559}
   objectB: {fileID: 6096499365298644056}
+  objectC: {fileID: 107251783}
   distance: 0
+  averagePosition: {x: 0, y: 0, z: 0}
   Camera: {fileID: 50145355}
   currentSize: 3
 --- !u!1 &1629445565
@@ -12881,7 +12883,7 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   MoveInput: Move(HeavyPlayer)
   JumpInput: Jump
-  jumpHeight: 3
+  jumpHeight: 5
   lastTime: 0
   sign: 0
   dashLimit: 0
