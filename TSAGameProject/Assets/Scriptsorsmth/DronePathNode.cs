@@ -11,18 +11,27 @@ public class DronePathNode : MonoBehaviour
     public string Text;
     public float TextAnimationSpeed = 10;
     public bool hasTriggered = false;
-
+    public float delay = 0;
     [field: SerializeField]
     public bool continueOnCondition = false;
     [ConditionalField("continueOnCondition", false)]
     public string flagTriggeredBy;
 
+    public bool isWaiting = false;
     public void AnimateText()
     {
         if (hasTriggered) return;
         hasTriggered = true;
+        StartCoroutine(wait());
         GameObject.Find("DroneText").GetComponentInChildren<TMP_Text>().text = "";
        StartCoroutine(animateText());
+    }
+
+    private IEnumerator wait()
+    {
+        isWaiting = true;
+        yield return new WaitForSeconds(delay);
+        isWaiting = false;
     }
 
     private IEnumerator animateText()

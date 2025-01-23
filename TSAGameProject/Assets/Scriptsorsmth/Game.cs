@@ -1,6 +1,10 @@
+using MyBox;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
@@ -16,15 +20,31 @@ public class Game : MonoBehaviour
     {
         UIManager = FindObjectOfType<UI_Manager>();
         lvlMgr = FindObjectOfType<LevelManager>(); 
-        lvlMgr.loadMap(lvlMgr.getReferenceToLevel(Level));
-        this.startLevel(lvlMgr);
+
     }
 
+    public async void StartCour(Map map, GameObject[] loadAfter = null)
+    {
+        print("Trying to load level " + Level.ToString() + "...");
+        lvlMgr.loadMap(map);
+
+        print("Loading successful");
+        if (loadAfter != null)
+        {
+            loadAfter.ForEach(a => a.SetActive(true));
+        }
+        this.startLevel(lvlMgr);
+    }
     // Update is called once per frame
     void Update()
     {
         
 
+    }
+
+    public Map GetMap()
+    {
+        return lvlMgr.getReferenceToLevel(Level);
     }
 
     private IEnumerator updateFPS()
@@ -38,11 +58,17 @@ public class Game : MonoBehaviour
      
     void startLevel(LevelManager mgr)
     {
+        FindObjectsByType<PlayerControllerRB2D>(default).ForEach(player => player.ResetPos());
         transform.parent.GetComponentInChildren<LevelScript>().LevelStart();
         FindObjectOfType<DroneMove>().GetComponent<SplineAnimate>().Container = GameObject.Find("DronePath(Clone)").GetComponent<SplineContainer>();
         FindObjectOfType<DroneMove>().GetComponent<SplineAnimate>().Play();
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
+    }
+
+    void ResetLevel()
+    {
+        loadNewLevel(Level);
     }
     public void loadNewLevel(Levels.Level levelToLoad)
     {

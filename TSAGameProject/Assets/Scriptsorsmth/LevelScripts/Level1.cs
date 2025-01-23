@@ -17,7 +17,7 @@ public class Level1 : LevelScript
             FindObjectOfType<UI_Manager>().getElementGameObjectByName("LevelEnd").GetComponentInChildren<TMP_Text>().color = new Color(1, 1, 1, i / 80f);
             yield return i;
         }
-        Time.timeScale = 0;
+        FindObjectOfType<Game>().loadNewLevel(Levels.Level.id02);
         yield break;
     }
 

@@ -77,6 +77,7 @@
     <Compile Include="Assets\DroneMove.cs" />
     <Compile Include="Assets\Scriptsorsmth\InverseMask.cs" />
     <Compile Include="Assets\DroneHelperText.cs" />
+    <Compile Include="Assets\MenuManager.cs" />
     <Compile Include="Assets\Scriptsorsmth\LevelScript.cs" />
     <Compile Include="Assets\ConditionalField.cs" />
     <Compile Include="Assets\Scriptsorsmth\Levels.cs" />

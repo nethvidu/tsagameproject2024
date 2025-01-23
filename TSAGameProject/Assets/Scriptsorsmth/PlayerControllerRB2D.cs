@@ -8,6 +8,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 public class PlayerControllerRB2D : MonoBehaviour
 {
+    public int playerNum;
     [field: Header("Stats")]
     [field: SerializeField]
     public float Health { get; set; }
@@ -80,6 +81,11 @@ public class PlayerControllerRB2D : MonoBehaviour
             }
         };
         moveAction.canceled += _ => movePress = "";
+    }
+
+    public void ResetPos()
+    {
+        transform.position = GameObject.Find($"_P{playerNum}Spawn(Clone)").transform.position;
     }
 
     // Update is called once per frame
@@ -179,6 +185,7 @@ public class PlayerControllerRB2D : MonoBehaviour
                 }
             });
         }
+        if (transform.position.y < -50) ResetPos();
     }
     
     void AnimateAvatar()

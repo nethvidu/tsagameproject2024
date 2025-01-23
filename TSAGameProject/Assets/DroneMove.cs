@@ -46,14 +46,19 @@ public Transform textLocation;
     */
     void Update()
     {
-        print(Physics2D.OverlapCircleAll(transform.position, 0.5f).ToString());
         splineCheck();
         Collider2D col = (from c in Physics2D.OverlapCircleAll(transform.position, 0.5f).ToList() where c.gameObject.GetComponent<DronePathNode>() != null select c).FirstOrDefault();
         if (col != null)
         {
             col.gameObject.GetComponent<DronePathNode>().AnimateText();
         }
-        currentNode = col.gameObject;
+        try
+        {
+            currentNode = col.gameObject;
+        }
+        catch { }
+            transform.parent.Find("_Drone").transform.position = new Vector3(transform.position.x, transform.position.y + Mathf.Sin(Time.time * 2f) * 0.15f, 0);
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -66,7 +71,7 @@ public Transform textLocation;
     }
     void splineCheck()
     {
-        if (!isPlayerWithinRadius())
+        if (!isPlayerWithinRadius() || currentNode.GetComponent<DronePathNode>().isWaiting)
         {
             GetComponent<SplineAnimate>().Pause();
             return;
