@@ -329,7 +329,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 41.10897
+    OrthographicSize: 7.836306
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: Hello!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c46747cda615d5488ed005f8450f11b, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 5f035bfeee58bea459ee4cda7b3d373a, type: 2}
@@ -1550,7 +1550,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 41.10897
+  orthographic size: 7.836306
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7362,7 +7362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d5363a434f765e4a89473fec6c46e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level: 2
+  Level: 1
   players:
   - {fileID: 953288115}
   - {fileID: 1742266720}
@@ -13189,7 +13189,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectA: {fileID: 8173120879816865559}
   objectB: {fileID: 6096499365298644056}
+  objectC: {fileID: 1849889485}
   distance: 0
+  averagePosition: {x: 0, y: 0, z: 0}
   Camera: {fileID: 50145355}
   currentSize: 5
 --- !u!1 &1629445565
@@ -13629,13 +13631,13 @@ MonoBehaviour:
   move: {x: 0, y: 0}
   MoveInput: Move(HeavyPlayer)
   JumpInput: Jump
-  jumpHeight: 3
+  jumpHeight: 5
   lastTime: 0
   sign: 0
   dashLimit: 0
   dashLength: 0.5
   dashForce: 15
-  dashForgiveness: 0.7
+  dashForgiveness: 0.5
   dashGravity: 7
   lastMove: {x: 0, y: 0}
 --- !u!50 &1742266721

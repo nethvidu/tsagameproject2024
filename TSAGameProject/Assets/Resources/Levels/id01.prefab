@@ -125,6 +125,132 @@ MonoBehaviour:
   PickupObject: {fileID: 0}
   DoorIsTriggered: 0
   DoorFlagTriggeredBy: 
+--- !u!1 &552556640733127851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5623141731477478051}
+  - component: {fileID: 7894069188948681788}
+  - component: {fileID: 5360587428757163248}
+  - component: {fileID: 6990769331351928371}
+  m_Layer: 0
+  m_Name: DronePathNode (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5623141731477478051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552556640733127851}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 70.973, y: -24.81, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7894069188948681788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552556640733127851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: We're almost there, just continue to the right!
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 7
+  continueOnCondition: 0
+  flagTriggeredBy: Door2
+  isWaiting: 0
+--- !u!61 &5360587428757163248
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552556640733127851}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &6990769331351928371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552556640733127851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &559294995002948420
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +869,564 @@ MonoBehaviour:
           y: 0.6769358
           z: -0.20434752
           w: 0.6769358
+    - Position:
+        x: 42.67
+        y: -5.4799995
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 44.677
+        y: -8.130001
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 47.86
+        y: -11.790001
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 55.53
+        y: -13.110001
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 61.029003
+        y: -13.550999
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 61.819996
+        y: -11.029999
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 60.28
+        y: -7.420002
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 58.42
+        y: -6.869999
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 58.39
+        y: -4.2299995
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 63.710003
+        y: -4.049999
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 63.359997
+        y: 1.3799992
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 65.14001
+        y: -3.9099998
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 72.350006
+        y: -4.8099995
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 72.4
+        y: -12.240002
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 71.977005
+        y: -12.518002
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 76.100006
+        y: -13.720001
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 85.100006
+        y: -10.5
+        z: 0
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 85.520004
+        y: -6.130001
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 80.420006
+        y: -5.6399994
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 72.350006
+        y: -5.3999996
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 66.37
+        y: -4.4300003
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 66.79
+        y: 0.07999992
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 67.62
+        y: 0.86999893
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 69.47
+        y: -0.09000015
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 85.68
+        y: 0.030000687
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 89.880005
+        y: 0.7399998
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 90.3
+        y: 3.7299995
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 94.28001
+        y: 3.4500008
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 96.733
+        y: 1.5
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 99.473
+        y: 1.5580006
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
+    - Position:
+        x: 100.100006
+        y: 3.0289993
+        z: 1
+      TangentIn:
+        x: 0
+        y: 0
+        z: -0.1673533
+      TangentOut:
+        x: 0
+        y: 0
+        z: 0.1673533
+      Rotation:
+        value:
+          x: 0.20434754
+          y: 0.6769358
+          z: -0.20434752
+          w: 0.6769358
     m_MetaData:
     - Mode: 1
       Tension: 0.5
@@ -759,6 +1443,68 @@ MonoBehaviour:
     - Mode: 1
       Tension: 0.5
     - Mode: 0
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
+      Tension: 0.5
+    - Mode: 2
       Tension: 0.5
     - Mode: 2
       Tension: 0.5
@@ -7228,9 +7974,9 @@ MonoBehaviour:
     wall'
   TextAnimationSpeed: 10
   hasTriggered: 0
-  delay: 7
-  continueOnCondition: 1
-  flagTriggeredBy: 
+  delay: 15
+  continueOnCondition: 0
+  flagTriggeredBy: Broke1
   isWaiting: 0
 --- !u!61 &6141082507758406340
 BoxCollider2D:
@@ -7284,6 +8030,131 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2879147187013454623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+--- !u!1 &2923490975924646765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5131543637037511087}
+  - component: {fileID: 5277473810032742185}
+  - component: {fileID: 9085689287183849504}
+  - component: {fileID: 7342894924361349909}
+  m_Layer: 0
+  m_Name: DronePathNode (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5131543637037511087
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923490975924646765}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 64.23, y: -39.167, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5277473810032742185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923490975924646765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Time for another ramming! Flick that lever too
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 0
+  continueOnCondition: 1
+  flagTriggeredBy: Door1
+  isWaiting: 0
+--- !u!61 &9085689287183849504
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923490975924646765}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &7342894924361349909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2923490975924646765}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
@@ -29539,6 +30410,132 @@ MonoBehaviour:
   PickupObject: {fileID: 0}
   DoorIsTriggered: 0
   DoorFlagTriggeredBy: 
+--- !u!1 &3104977665645831692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1151657096945828938}
+  - component: {fileID: 3873846501603204460}
+  - component: {fileID: 3551792678869001000}
+  - component: {fileID: 3163001206868548987}
+  m_Layer: 0
+  m_Name: DronePathNode (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1151657096945828938
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104977665645831692}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 83.596, y: -31.177, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3873846501603204460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104977665645831692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Flick the lever, then break the wall to continue onwards!
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 5
+  continueOnCondition: 0
+  flagTriggeredBy: Door2
+  isWaiting: 0
+--- !u!61 &3551792678869001000
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104977665645831692}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &3163001206868548987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3104977665645831692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &3236747209841562574
 GameObject:
   m_ObjectHideFlags: 0
@@ -33699,6 +34696,15 @@ Transform:
   - {fileID: 2741484587372930408}
   - {fileID: 5803618394524796787}
   - {fileID: 8282807266176645969}
+  - {fileID: 4975780791588307775}
+  - {fileID: 5131543637037511087}
+  - {fileID: 6001271269336538724}
+  - {fileID: 284075649833900201}
+  - {fileID: 6875684261446864866}
+  - {fileID: 1151657096945828938}
+  - {fileID: 5623141731477478051}
+  - {fileID: 4783432242924499019}
+  - {fileID: 1943011955565975854}
   - {fileID: 3055863749124269844}
   - {fileID: 4498094390423809395}
   - {fileID: 8442262372583072775}
@@ -33728,6 +34734,7 @@ Transform:
   - {fileID: 1690360234483031064}
   - {fileID: 3159894982842083706}
   - {fileID: 6130592666678149446}
+  - {fileID: 1472821914595965342}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7095449955561416608
@@ -34029,6 +35036,257 @@ MonoBehaviour:
   PickupObject: {fileID: 0}
   DoorIsTriggered: 0
   DoorFlagTriggeredBy: 
+--- !u!1 &5996003712692677545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 284075649833900201}
+  - component: {fileID: 452967218404771082}
+  - component: {fileID: 682439819483723696}
+  - component: {fileID: 2375616296667296494}
+  m_Layer: 0
+  m_Name: DronePathNode (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &284075649833900201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996003712692677545}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 66.65, y: -24.98, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &452967218404771082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996003712692677545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: <-- Alrighty, flick the lever, [Player2]
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 0
+  continueOnCondition: 1
+  flagTriggeredBy: Door2
+  isWaiting: 0
+--- !u!61 &682439819483723696
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996003712692677545}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &2375616296667296494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5996003712692677545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+--- !u!1 &6078637173305617904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4975780791588307775}
+  - component: {fileID: 7765779056175580237}
+  - component: {fileID: 3897054448044834585}
+  - component: {fileID: 4117650040317976160}
+  m_Layer: 0
+  m_Name: DronePathNode (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4975780791588307775
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078637173305617904}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.68, y: -33.64, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7765779056175580237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078637173305617904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Nice!
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 5
+  continueOnCondition: 0
+  flagTriggeredBy: Broke1
+  isWaiting: 0
+--- !u!61 &3897054448044834585
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078637173305617904}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &4117650040317976160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078637173305617904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &6188546282090858557
 GameObject:
   m_ObjectHideFlags: 0
@@ -34060,6 +35318,384 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4890873783931321335}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7088790873643884545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1943011955565975854}
+  - component: {fileID: 6689159026204740098}
+  - component: {fileID: 4497689890976280170}
+  - component: {fileID: 4357519929574047966}
+  m_Layer: 0
+  m_Name: DronePathNode (22)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1943011955565975854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088790873643884545}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 103.538, y: -22.622, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6689159026204740098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088790873643884545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Ok, it should be in that pipe up there...
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 7
+  continueOnCondition: 0
+  flagTriggeredBy: Lol
+  isWaiting: 1
+--- !u!61 &4497689890976280170
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088790873643884545}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &4357519929574047966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088790873643884545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+--- !u!1 &7860258666896148895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6001271269336538724}
+  - component: {fileID: 2711980709448550924}
+  - component: {fileID: 4420855605518503409}
+  - component: {fileID: 1155560283594396435}
+  m_Layer: 0
+  m_Name: DronePathNode (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6001271269336538724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860258666896148895}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 47.68, y: -33.64, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2711980709448550924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860258666896148895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Good! Now, follow me, [Player2]
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 5
+  continueOnCondition: 0
+  flagTriggeredBy: Broke1
+  isWaiting: 0
+--- !u!61 &4420855605518503409
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860258666896148895}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1155560283594396435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7860258666896148895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+--- !u!1 &8044704327721174456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4783432242924499019}
+  - component: {fileID: 3853536879103960013}
+  - component: {fileID: 3799029703415663575}
+  - component: {fileID: 8808640186167841429}
+  m_Layer: 0
+  m_Name: DronePathNode (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4783432242924499019
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044704327721174456}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 97.5, y: -22.21, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3853536879103960013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044704327721174456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Should be on the other side of this door...
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 0
+  continueOnCondition: 1
+  flagTriggeredBy: Lol
+  isWaiting: 0
+--- !u!61 &3799029703415663575
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044704327721174456}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &8808640186167841429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8044704327721174456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &8261894389450253729
 GameObject:
   m_ObjectHideFlags: 0
@@ -34234,7 +35870,7 @@ MonoBehaviour:
   Text: Hmm, to get over this drop, you might need to DASH....
   TextAnimationSpeed: 10
   hasTriggered: 0
-  delay: 5
+  delay: 8
   continueOnCondition: 0
   flagTriggeredBy: flag1
   isWaiting: 0
@@ -34359,7 +35995,7 @@ MonoBehaviour:
   Text: Okay, it looks like this wall needs a little ramming to get through
   TextAnimationSpeed: 10
   hasTriggered: 0
-  delay: 6
+  delay: 10
   continueOnCondition: 0
   flagTriggeredBy: bruh2
   isWaiting: 0
@@ -34540,6 +36176,132 @@ MonoBehaviour:
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+--- !u!1 &9180771648428510022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6875684261446864866}
+  - component: {fileID: 2099625069040545849}
+  - component: {fileID: 4969570948603807441}
+  - component: {fileID: 2479798774127740116}
+  m_Layer: 0
+  m_Name: DronePathNode (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6875684261446864866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180771648428510022}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 75.12, y: -38.3, z: 1.0971264}
+  m_LocalScale: {x: 0.5125, y: 0.6125, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2099625069040545849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180771648428510022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac03794c9f7e5546bac428127c2180d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: Alright, [Player1], there's a lever this way >
+  TextAnimationSpeed: 10
+  hasTriggered: 0
+  delay: 5
+  continueOnCondition: 0
+  flagTriggeredBy: Door2
+  isWaiting: 0
+--- !u!61 &4969570948603807441
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180771648428510022}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2.1333334}
+    newSize: {x: 2, y: 2.1333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &2479798774127740116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9180771648428510022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 1
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField:
+  - 
   PressurePlateActuationMass: 0
   FreebodyMass: 0
   PickupObject: {fileID: 0}
@@ -34746,11 +36508,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5291514887398496338, guid: a6c41ec698512b24fba70896e8e88812, type: 3}
       propertyPath: <triggerFlag>k__BackingField.Array.data[0]
-      value: BearFall
+      value: Lol
       objectReference: {fileID: 0}
     - target: {fileID: 5992263925349707089, guid: a6c41ec698512b24fba70896e8e88812, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 102.27228
+      value: 99.837
       objectReference: {fileID: 0}
     - target: {fileID: 5992263925349707089, guid: a6c41ec698512b24fba70896e8e88812, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34941,6 +36703,96 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1945982917559013340, guid: 4e351e88319f71649a24c0783bff3bc5, type: 3}
   m_PrefabInstance: {fileID: 974206190551063200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1558332144947598563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4890873783931321335}
+    m_Modifications:
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.6606274
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.8691628
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.301083
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100.95408
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -24.566
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 777816393773228206, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: m_Name
+      value: Door (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309126016336038569, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: DoorIsTriggered
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309126016336038569, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: DoorFlagTriggeredBy
+      value: Lol
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309126016336038569, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: <triggerFlag>k__BackingField.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3309126016336038569, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+      propertyPath: <triggerFlag>k__BackingField.Array.data[0]
+      value: BearFall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+--- !u!4 &1472821914595965342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 130830261679795581, guid: 0c46fcb35354f874d984503297e7848d, type: 3}
+  m_PrefabInstance: {fileID: 1558332144947598563}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1631869609055695205
 PrefabInstance:
@@ -35744,6 +37596,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1788284689008201142, guid: f1ee152455bd8ee4686ef0c607c6330e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2550296091961303809, guid: f1ee152455bd8ee4686ef0c607c6330e, type: 3}
+      propertyPath: isBroken
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2550296091961303809, guid: f1ee152455bd8ee4686ef0c607c6330e, type: 3}
