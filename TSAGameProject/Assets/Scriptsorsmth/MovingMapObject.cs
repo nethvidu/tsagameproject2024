@@ -44,7 +44,7 @@ public class MovingMapObject : MapObject
     private Vector3 prevPos;
     public void FixedUpdate()
     {
-        print(FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy));
+        //print(FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy));
         if (isTriggered && !FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy))
         {
             return;

@@ -31,7 +31,7 @@ public class Level1 : LevelScript
     {
         while (!GameOver)
         {
-            print("boo");
+            //print("boo");
             if (checkFlag("Lever1") && checkFlag("Lever2"))
             {
                 GameObject.Find("Door1(Clone)").GetComponent<MapObject>().PublicInvoke(true);

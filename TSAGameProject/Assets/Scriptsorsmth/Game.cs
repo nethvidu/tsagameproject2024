@@ -11,13 +11,14 @@ public class Game : MonoBehaviour
     private LevelManager lvlMgr;
     public PlayerControllerRB2D[] players;
     public UI_Manager UIManager;
+    public DroneMove Drone;
 
     void Start()
     {
         UIManager = FindObjectOfType<UI_Manager>();
         lvlMgr = FindObjectOfType<LevelManager>(); 
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(Level));
-        this.startLevel(lvlMgr);
+        this.startLevel();
     }
 
     // Update is called once per frame
@@ -36,18 +37,18 @@ public class Game : MonoBehaviour
         }
     }
      
-    void startLevel(LevelManager mgr)
+    void startLevel()
     {
         transform.parent.GetComponentInChildren<LevelScript>().LevelStart();
-        FindObjectOfType<DroneMove>().GetComponent<SplineAnimate>().Container = GameObject.Find("DronePath(Clone)").GetComponent<SplineContainer>();
-        FindObjectOfType<DroneMove>().GetComponent<SplineAnimate>().Play();
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
+        //GetComponent<LevelScript>().();
+        
     }
     public void loadNewLevel(Levels.Level levelToLoad)
     {
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(levelToLoad));
-        this.startLevel(lvlMgr);
+        this.startLevel();
     }
 
     void levelClear()

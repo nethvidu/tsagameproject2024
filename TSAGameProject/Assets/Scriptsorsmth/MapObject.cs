@@ -107,10 +107,12 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             }
             catch
             {
-                GetComponent<TilemapCollider2D>().isTrigger = true;
-                if (value)
-                {
-                    GetComponent<TilemapCollider2D>().isTrigger = false;
+                if(GetComponent<TilemapCollider2D>() != null){
+                    GetComponent<TilemapCollider2D>().isTrigger = true;
+                    if (value)
+                    {
+                        GetComponent<TilemapCollider2D>().isTrigger = false;
+                    }
                 }
             }
 
@@ -209,6 +211,9 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             RadialProgress = Instantiate(FindObjectOfType<UI_Manager>().getElementGameObjectByName("RadialProgress"), FindObjectOfType<UI_Manager>().transform);
             RadialProgress.transform.position = this.transform.position;
         }
+        if(this.tag == "DroneLocation"){
+            FindObjectOfType<DroneMove>().locList.Add(this.gameObject);
+        }
         onStart();
     }
 
@@ -223,7 +228,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
             RadialProgress.layer = 1;
             if (interactPlayer == PlayerToInteract.Player1) {
-                RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "DOWN";
+                RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "↓";
                 float dist = Vector3.Distance(transform.position, players[0].transform.position);
                 RadialProgress.transform.localScale = Vector3.zero;
                 if (dist <= interactRange)
