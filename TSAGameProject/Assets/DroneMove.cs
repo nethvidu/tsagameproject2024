@@ -27,13 +27,25 @@ public class DroneMove : MonoBehaviour
 
     // Update is called once per frame
     
-    void FixedUpdate()
+    void Update()
     {
-    
-        
+        if(locList != null){
+            Move(EvaluateMove());
+        }
+    }
+    Vector3 EvaluateMove()
+    {
+        Vector3 Closestpos = locList[0].transform.position;
+        foreach(GameObject g in locList){
+            if(Vector3.Distance(g.transform.position, Player1.transform.position) > 100) continue;
+            if(Vector3.Distance(Closestpos, Player1.transform.position) > Vector3.Distance(g.transform.position, Player1.transform.position)){
+                Closestpos = g.transform.position;
+            }
+        }
+        return Closestpos;
     }
     void Move(Vector2 endLocation){
-        
+        transform.position = (Vector2.Lerp(transform.position, endLocation, Time.deltaTime));
     }
     
 }
