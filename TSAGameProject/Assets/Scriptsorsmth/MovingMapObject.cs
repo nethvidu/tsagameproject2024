@@ -42,9 +42,10 @@ public class MovingMapObject : MapObject
         originalPos = transform.position;
     }
     private Vector3 prevPos;
-    public void FixedUpdate()
+    public void Update()
     {
         //print(FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy));
+        
         if (isTriggered && !FindObjectOfType<LevelScript>().checkFlag(flagTriggeredBy))
         {
             return;
@@ -55,11 +56,11 @@ public class MovingMapObject : MapObject
         {
             if (Vector2.Distance(transform.position, movePoint.transform.position) > 0.001f && !isMovingBack)
             {
-                transform.position = Vector2.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.fixedDeltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);
             }
             else if (isMovingBack   )
             {
-                transform.position = Vector2.MoveTowards(transform.position, originalPos, movementSpeed * Time.fixedDeltaTime);
+                transform.position = Vector2.MoveTowards(transform.position, originalPos, movementSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, originalPos) < 0.001f)
                 {
                     isMovingBack = false;
@@ -75,11 +76,11 @@ public class MovingMapObject : MapObject
         {
             if (Vector2.Distance(transform.position, movePoint.transform.position) > 0.005f && !isMovingBack)
             {
-                transform.position = Vector2.Lerp(transform.position, movePoint.transform.position, movementSpeed * Time.fixedDeltaTime);
+                transform.position = Vector2.Lerp(transform.position, movePoint.transform.position, movementSpeed * Time.deltaTime);
             }
             else if (isMovingBack)
             {
-                transform.position = Vector2.Lerp(transform.position, originalPos, movementSpeed * Time.fixedDeltaTime);
+                transform.position = Vector2.Lerp(transform.position, originalPos, movementSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, originalPos) < 0.005f)
                 {
                     isMovingBack = false;
@@ -90,7 +91,7 @@ public class MovingMapObject : MapObject
                 StartCoroutine(MoveCooldown());
             }
         }
-         Vel = (transform.position - prevPos) / Time.fixedDeltaTime;        
+         Vel = (transform.position - prevPos) / Time.deltaTime;        
     }
 
     public IEnumerator MoveCooldown()

@@ -223,76 +223,80 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     // Update is called once per frame
     void Update()
     {
-        if (isInteractable)
-        {
-            RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
-            RadialProgress.layer = 1;
-            if (interactPlayer == PlayerToInteract.Player1) {
-                RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "↓";
-                float dist = Vector3.Distance(transform.position, players[0].transform.position);
-                RadialProgress.transform.localScale = Vector3.zero;
-                if (dist <= interactRange)
-                {
-                    RadialProgress.transform.localScale = new Vector3(Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, 1);
-                    isInteracting = false;
-                    if (Input.GetKey(KeyCode.DownArrow))
-                    {
-                        Interact(players[0]);
-                    }
-                }
-            }
-            else
+        if(Vector2.Distance(this.transform.position, players[0].transform.position) < 100 || Vector2.Distance(this.transform.position, players[1].transform.position) < 100){
+
+        
+            if (isInteractable)
             {
                 RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
-                RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "S";
-                float dist = Vector3.Distance(transform.position, players[1].transform.position);
-                RadialProgress.transform.localScale = Vector3.zero;
-                if (dist <= interactRange)
-                {
-                    RadialProgress.transform.localScale = new Vector3(Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, 1);
-                    isInteracting = false;
-                    if (Input.GetKey(KeyCode.S))
+                RadialProgress.layer = 1;
+                if (interactPlayer == PlayerToInteract.Player1) {
+                    RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "↓";
+                    float dist = Vector3.Distance(transform.position, players[0].transform.position);
+                    RadialProgress.transform.localScale = Vector3.zero;
+                    if (dist <= interactRange)
                     {
-                        Interact(players[1]);
+                        RadialProgress.transform.localScale = new Vector3(Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, 1);
+                        isInteracting = false;
+                        if (Input.GetKey(KeyCode.DownArrow))
+                        {
+                            Interact(players[0]);
+                        }
                     }
                 }
-            }
-
-            RadialProgress.transform.Find("Center").transform.Find("Fill").GetComponent<InverseMask>().fillAmount = currentInteractPercentage;
-        }
-
-        if (interactableType == InteractableType.Door && DoorIsTriggered && GameObject.Find("LevelScript(Clone)").GetComponent<LevelScript>().checkFlag(DoorFlagTriggeredBy))
-        {
-            PublicInvoke(true);
-        }
-        if (interactableType == InteractableType.Door && internalFlags[0] != null)
-        {
-            if ((bool)internalFlags[0])
-            {
-                if (transform.position.y < (float)internalFlags[1] + 1.4f)
+                else
                 {
-                    transform.position += new Vector3(0f, Time.deltaTime, 0f);
+                    RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
+                    RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "S";
+                    float dist = Vector3.Distance(transform.position, players[1].transform.position);
+                    RadialProgress.transform.localScale = Vector3.zero;
+                    if (dist <= interactRange)
+                    {
+                        RadialProgress.transform.localScale = new Vector3(Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, Mathf.Min((interactRange - dist) / interactRange, 1f) + 0.3f, 1);
+                        isInteracting = false;
+                        if (Input.GetKey(KeyCode.S))
+                        {
+                            Interact(players[1]);
+                        }
+                    }
                 }
-            }
-            if (!(bool)internalFlags[0]) {
-                if (transform.position.y > (float)internalFlags[1])
-                {
-                    transform.position -= new Vector3(0f, Time.deltaTime, 0f);
-                } 
-            }
-            transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, (float)internalFlags[1], (float)internalFlags[1] + 1.4f), transform.position.z);
-        }
-        isCollidable = isCollidableEditor;
 
-        if (interactableType == InteractableType.PressurePlate)
-        {
-            if (GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
+                RadialProgress.transform.Find("Center").transform.Find("Fill").GetComponent<InverseMask>().fillAmount = currentInteractPercentage;
+            }
+
+            if (interactableType == InteractableType.Door && DoorIsTriggered && GameObject.Find("LevelScript(Clone)").GetComponent<LevelScript>().checkFlag(DoorFlagTriggeredBy))
             {
-                float totalMass = (from collider in Physics2D.OverlapCircleAll(transform.position, 0.5f, LayerMask.GetMask("ground")) where collider.GetComponent<PlayerControllerRB2D>() != null select collider.GetComponent<Rigidbody2D>().mass).Sum();
-                currMass = totalMass;
-                if (totalMass >= PressurePlateActuationMass)
+                PublicInvoke(true);
+            }
+            if (interactableType == InteractableType.Door && internalFlags[0] != null)
+            {
+                if ((bool)internalFlags[0])
                 {
-                    FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+                    if (transform.position.y < (float)internalFlags[1] + 1.4f)
+                    {
+                        transform.position += new Vector3(0f, Time.deltaTime, 0f);
+                    }
+                }
+                if (!(bool)internalFlags[0]) {
+                    if (transform.position.y > (float)internalFlags[1])
+                    {
+                        transform.position -= new Vector3(0f, Time.deltaTime, 0f);
+                    } 
+                }
+                transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, (float)internalFlags[1], (float)internalFlags[1] + 1.4f), transform.position.z);
+            }
+            isCollidable = isCollidableEditor;
+
+            if (interactableType == InteractableType.PressurePlate)
+            {
+                if (GetComponent<BoxCollider2D>().IsTouchingLayers(LayerMask.GetMask("Player")))
+                {
+                    float totalMass = (from collider in Physics2D.OverlapCircleAll(transform.position, 0.5f, LayerMask.GetMask("ground")) where collider.GetComponent<PlayerControllerRB2D>() != null select collider.GetComponent<Rigidbody2D>().mass).Sum();
+                    currMass = totalMass;
+                    if (totalMass >= PressurePlateActuationMass)
+                    {
+                        FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+                    }
                 }
             }
         }
