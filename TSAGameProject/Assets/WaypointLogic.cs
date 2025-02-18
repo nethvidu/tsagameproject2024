@@ -12,6 +12,8 @@ using UnityEngine;
 public class WaypointLogic : MonoBehaviour
 {
     DroneMove Drone;
+
+    public bool shouldUpdateText;
     public string newText;
     // Start is called before the first frame update
     void Start()
@@ -29,15 +31,19 @@ public class WaypointLogic : MonoBehaviour
         
     }
     public void AccessNode(){
-        if(newText != "" || newText == null || newText == Drone.text.text){
-            Drone.text.text = "";
+        if(newText != "" && this.shouldUpdateText){
             StartCoroutine(ChangeText());
         }
     }
     IEnumerator ChangeText(){
-        foreach(char e in newText){
-            Drone.text.text += e + "";
-            yield return new WaitForSeconds(0.2f);
+        string updatedText = "";
+        for (int i = 0; i < newText.Length; i++)
+        {
+            updatedText += this.newText[i];
+            Drone.text.text = updatedText;
+            yield return new WaitForSeconds(1f);
         }
+        Drone.text.text = newText;
+        yield break;
     }
 }

@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 1.665609
+    OrthographicSize: 7.515418
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -482,8 +482,7 @@ MonoBehaviour:
   playerOfInterest: 0
   finalLocation: {x: 0, y: 0}
   Speed: 0
-  <playerRadius>k__BackingField: 15
-  textLocation: {fileID: 0}
+  text: {fileID: 0}
   textTargetLocation: {x: 0, y: 0}
   locList: []
 --- !u!212 &107251786
@@ -1424,7 +1423,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.665609
+  orthographic size: 7.515418
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
