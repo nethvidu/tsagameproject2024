@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Moving Platform
   - DroneLocation
+  - EndLocation
+  - SpawnPoint1
+  - SpawnPoint2
   layers:
   - Default
   - TransparentFX

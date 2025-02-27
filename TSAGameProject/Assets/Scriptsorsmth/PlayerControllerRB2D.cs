@@ -61,10 +61,13 @@ public class PlayerControllerRB2D : MonoBehaviour
     public float dashGravity;
     public Vector2 lastMove = new Vector2(0,0);
 
+    public Vector3 playerStart = new Vector3(0,0,0);
+
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>(); // Set reference to rigidbody
+        transform.position = playerStart;
         moveAction = InputSystem.actions.FindAction(MoveInput);
         Health = 100f; // Placeholder
         jumpAction = InputSystem.actions.FindAction(JumpInput);
@@ -217,4 +220,5 @@ public class PlayerControllerRB2D : MonoBehaviour
         tapCount = 0;
         
     }
+    
 }

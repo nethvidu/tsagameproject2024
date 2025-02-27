@@ -201,6 +201,11 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     void Start()
     {
         players = FindObjectOfType<Game>().players;
+        
+        
+        if(this.tag == "DroneLocation"){
+            FindObjectOfType<DroneMove>().locList.Add(this.gameObject);
+        } 
         try {
             originalColliderSize = GetComponent<BoxCollider2D>().size;
         }
@@ -211,18 +216,21 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
             RadialProgress = Instantiate(FindObjectOfType<UI_Manager>().getElementGameObjectByName("RadialProgress"), FindObjectOfType<UI_Manager>().transform);
             RadialProgress.transform.position = this.transform.position;
         }
-        if(this.tag == "DroneLocation"){
-            FindObjectOfType<DroneMove>().locList.Add(this.gameObject);
-        }
         onStart();
+        /*if(this.tag == "DroneLocation"){
+            FindObjectOfType<DroneMove>().locList.Add(this.gameObject);
+        } 
+        */
     }
 
     
-    public virtual void onStart() { }
+    public virtual void onStart() { 
+    }
 
     // Update is called once per frame
     void Update()
     {
+       
         if(Vector2.Distance(this.transform.position, players[0].transform.position) < 100 || Vector2.Distance(this.transform.position, players[1].transform.position) < 100){
 
         

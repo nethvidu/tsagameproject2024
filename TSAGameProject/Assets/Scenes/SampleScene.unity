@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 7.515418
+    OrthographicSize: 8.183141
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -344,7 +344,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c46747cda615d5488ed005f8450f11b, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 5f035bfeee58bea459ee4cda7b3d373a, type: 2}
@@ -434,6 +434,8 @@ GameObject:
   - component: {fileID: 107251784}
   - component: {fileID: 107251787}
   - component: {fileID: 107251788}
+  - component: {fileID: 107251789}
+  - component: {fileID: 107251790}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Untagged
@@ -459,7 +461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.319, y: 1.492}
+  m_AnchoredPosition: {x: 5, y: -29}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &107251784
@@ -484,6 +486,7 @@ MonoBehaviour:
   Speed: 0
   text: {fileID: 0}
   textTargetLocation: {x: 0, y: 0}
+  Active: 0
   locList: []
 --- !u!212 &107251786
 SpriteRenderer:
@@ -605,6 +608,40 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &107251789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107251782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a4657c90dd16149a1f19c732553fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!95 &107251790
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107251782}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9deee6dc7802cc54d96d74e1105ff8e6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &120985411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1423,7 +1460,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.515418
+  orthographic size: 8.183141
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1562,7 +1599,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.443, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8173120879816865559}
   m_Father: {fileID: 953288114}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &528863181
@@ -6924,7 +6962,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8173120879816865559}
   - {fileID: 528863180}
   - {fileID: 1059648265}
   m_Father: {fileID: 2100110457}
@@ -7104,7 +7141,8 @@ MonoBehaviour:
   - {fileID: 953288115}
   - {fileID: 1742266720}
   UIManager: {fileID: 0}
-  Drone: {fileID: 0}
+  levelend: {fileID: 0}
+  startPos: []
 --- !u!4 &1020806813
 Transform:
   m_ObjectHideFlags: 0
@@ -16080,7 +16118,7 @@ Transform:
   m_GameObject: {fileID: 7035990375240347508}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09899998, y: -0.537, z: 0}
+  m_LocalPosition: {x: 0.09899998, y: -0.09400001, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16101,7 +16139,7 @@ Transform:
   - {fileID: 1087021286213500420}
   - {fileID: 340199423}
   - {fileID: 998783876}
-  m_Father: {fileID: 953288114}
+  m_Father: {fileID: 528863180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8441687890044551073
 MonoBehaviour:

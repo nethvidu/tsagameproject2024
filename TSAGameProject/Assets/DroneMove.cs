@@ -19,7 +19,7 @@ public class DroneMove : MonoBehaviour
     //public float playerRadius { get; set; }
     public TextMeshProUGUI text;
     public Vector2 textTargetLocation;
-    
+    public bool Active;
     public List<GameObject> locList = new List<GameObject>();
     
     void Start()
@@ -44,6 +44,7 @@ public class DroneMove : MonoBehaviour
                 finalLocation = Player2.transform.position;
                 break;
         }
+
         
     }
     Vector3 EvaluateMove()

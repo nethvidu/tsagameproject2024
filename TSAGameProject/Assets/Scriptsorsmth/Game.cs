@@ -11,7 +11,8 @@ public class Game : MonoBehaviour
     private LevelManager lvlMgr;
     public PlayerControllerRB2D[] players;
     public UI_Manager UIManager;
-    public DroneMove Drone;
+    public LevelEnd levelend;
+    public Gate[] startPos;
 
     void Start()
     {
@@ -24,7 +25,6 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
     }
 
@@ -42,6 +42,7 @@ public class Game : MonoBehaviour
         transform.parent.GetComponentInChildren<LevelScript>().LevelStart();
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
+        
         //GetComponent<LevelScript>().();
         
     }
@@ -49,11 +50,12 @@ public class Game : MonoBehaviour
     {
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(levelToLoad));
         this.startLevel();
+
     }
 
-    void levelClear()
+    public void levelClear()
     {
-
+        Destroy(this.transform.parent.Find("Level").Find("CameraBounds(Clone)").gameObject);
     }
 }
  
