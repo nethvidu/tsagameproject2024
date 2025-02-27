@@ -13,11 +13,12 @@ public class SpawnPoint : MonoBehaviour
 
     }
     public Players PlayerToSpawn;
+    public Game game;
     [field: SerializeField]
     void Start()
     {
-        
-        players = FindObjectOfType<Game>().players;
+        game = FindObjectOfType<Game>();
+        players = game.players;
         if(PlayerToSpawn == Players.Player1){
             players[0].playerStart = transform.position;
         } else if(PlayerToSpawn == Players.Player2){
@@ -30,6 +31,6 @@ public class SpawnPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

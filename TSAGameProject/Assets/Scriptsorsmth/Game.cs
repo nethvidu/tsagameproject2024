@@ -13,6 +13,7 @@ public class Game : MonoBehaviour
     public UI_Manager UIManager;
     public LevelEnd levelend;
     public Gate[] startPos;
+    public bool levelLoaded;
 
     void Start()
     {
@@ -42,19 +43,24 @@ public class Game : MonoBehaviour
         transform.parent.GetComponentInChildren<LevelScript>().LevelStart();
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
-        
+        levelLoaded = true;
+        players[0].SpawnPlayer();
+        players[1].SpawnPlayer();
         //GetComponent<LevelScript>().();
         
     }
     public void loadNewLevel(Levels.Level levelToLoad)
     {
+
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(levelToLoad));
         this.startLevel();
+        levelLoaded = false;
 
     }
 
     public void levelClear()
     {
+        levelLoaded = false;
         Destroy(this.transform.parent.Find("Level").Find("CameraBounds(Clone)").gameObject);
     }
 }

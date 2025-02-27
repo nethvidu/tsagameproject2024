@@ -220,5 +220,9 @@ public class PlayerControllerRB2D : MonoBehaviour
         tapCount = 0;
         
     }
+    public void SpawnPlayer()
+    {
+        transform.position = playerStart;
+    }
     
 }
