@@ -7,19 +7,18 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-    public Levels.Level Level = Levels.Level.id03; //Placeholder
+    public Levels.Level level = Levels.Level.id01; //Placeholder
     private LevelManager lvlMgr;
     public PlayerControllerRB2D[] players;
     public UI_Manager UIManager;
     public LevelEnd levelend;
-    public Gate[] startPos;
     public bool levelLoaded;
 
     void Start()
     {
         UIManager = FindObjectOfType<UI_Manager>();
         lvlMgr = FindObjectOfType<LevelManager>(); 
-        lvlMgr.loadMap(lvlMgr.getReferenceToLevel(Level));
+        lvlMgr.loadMap(lvlMgr.getReferenceToLevel(level));
         this.startLevel();
     }
 
@@ -46,9 +45,8 @@ public class Game : MonoBehaviour
         levelLoaded = true;
         players[0].SpawnPlayer();
         players[1].SpawnPlayer();
-        //GetComponent<LevelScript>().();
-        
     }
+
     public void loadNewLevel(Levels.Level levelToLoad)
     {
 

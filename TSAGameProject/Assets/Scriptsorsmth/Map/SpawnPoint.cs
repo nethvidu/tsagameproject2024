@@ -14,7 +14,6 @@ public class SpawnPoint : MonoBehaviour
     }
     public Players PlayerToSpawn;
     public Game game;
-    [field: SerializeField]
     void Start()
     {
         game = FindObjectOfType<Game>();

@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 using UnityEngine.UIElements;
 using MyBox;
 using System.Linq;
-using UnityEngine;
+
 
 public class WaypointLogic : MonoBehaviour
 {
