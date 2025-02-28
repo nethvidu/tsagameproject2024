@@ -49,7 +49,6 @@ public class Game : MonoBehaviour
 
     public void loadNewLevel(Levels.Level levelToLoad)
     {
-
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(levelToLoad));
         this.startLevel();
         levelLoaded = false;
