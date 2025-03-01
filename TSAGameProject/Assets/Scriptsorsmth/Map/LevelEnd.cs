@@ -38,9 +38,9 @@ public class LevelEnd : MonoBehaviour
         } 
         if(player1 && player2){
             //StartCoroutine(LevelTransition());
-            transition.Play("Crossfade_Start", -1, 0.0f);
-            game.levelClear();
-            game.loadNewLevel(Level);
+            //game.levelClear();
+            //game.loadNewLevel(Level);
+            StartCoroutine(LevelTransition());
             player1 = false;
             player2 = false;
         }
@@ -48,8 +48,8 @@ public class LevelEnd : MonoBehaviour
     IEnumerator LevelTransition()
     {
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
-        transition.Play("Crossfade_Start");
-        yield return new WaitForSecondsRealtime(1f);
+        transition.Play("Crossfade_Start", -1, 0.0f);
+        yield return new WaitForSecondsRealtime(0.4f);
         game.levelClear();
         Debug.Log("Ended Coroutine at timestamp : " + Time.time);
         game.loadNewLevel(Level);
