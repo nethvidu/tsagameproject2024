@@ -13,6 +13,7 @@ public class LevelEnd : MonoBehaviour
     public BoxCollider2D collider;
     public Animator transition;
     
+    
     void Start()
     {
         game = FindObjectOfType<Game>();

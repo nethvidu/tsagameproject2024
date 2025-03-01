@@ -8,9 +8,7 @@ public class DroneAnimation : MonoBehaviour
     public Animator animator;
     void Start()
     {
-        GetComponent<DroneMove>().enabled = false;
-        animator = GetComponent<Animator>();
-        animator.Play("DroneWakeup");
+        //GetComponent<DroneMove>().enabled = false;
         
     }
 
@@ -18,5 +16,9 @@ public class DroneAnimation : MonoBehaviour
     void Update()
     {
         
+    }
+    public void PlayStartup()
+    {
+        animator.Play("DroneActivate");
     }
 }

@@ -21,11 +21,12 @@ public class DroneMove : MonoBehaviour
     public Vector2 textTargetLocation;
     public bool Active;
     public List<GameObject> locList = new List<GameObject>();
-    
+    public Animator animator;
     void Start()
     {
         playerOfInterest = Random.Range(0,1);
         text = GetComponentInChildren<TextMeshProUGUI>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -47,7 +48,7 @@ public class DroneMove : MonoBehaviour
 
         
     }
-    Vector3 EvaluateMove()
+    public Vector3 EvaluateMove()
     {
         Vector3 Closestpos = locList[0].transform.position;
         foreach(GameObject g in locList){
@@ -59,7 +60,7 @@ public class DroneMove : MonoBehaviour
         }
         return Closestpos;
     }
-    void Move(Vector2 endLocation){
+    public void Move(Vector2 endLocation){
         transform.position = (Vector2.Lerp(transform.position, endLocation, Time.deltaTime));
     }
     
