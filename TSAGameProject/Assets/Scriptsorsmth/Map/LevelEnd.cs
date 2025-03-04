@@ -11,14 +11,16 @@ public class LevelEnd : MonoBehaviour
     private bool player1 = false;
     private bool player2 = false;
     public BoxCollider2D collider;
-    public Animator transition;
-    
+    //public DroneMove drone;
+    //public Animator transition;
+
     
     void Start()
     {
         game = FindObjectOfType<Game>();
         collider = GetComponent<BoxCollider2D>();
-        transition = FindFirstObjectByType<Animator>();
+        //transition = FindFirstObjectByType<Animator>();
+        //drone = FindFirstObjectByType<DroneMove>();
     }
 
     // Update is called once per frame
@@ -41,19 +43,9 @@ public class LevelEnd : MonoBehaviour
             //StartCoroutine(LevelTransition());
             //game.levelClear();
             //game.loadNewLevel(Level);
-            StartCoroutine(LevelTransition());
+            StartCoroutine(game.LevelTransition(Level));
             player1 = false;
             player2 = false;
         }
-    }
-    IEnumerator LevelTransition()
-    {
-        Debug.Log("Started Coroutine at timestamp : " + Time.time);
-        transition.Play("Crossfade_Start", -1, 0.0f);
-        yield return new WaitForSecondsRealtime(0.4f);
-        game.levelClear();
-        Debug.Log("Ended Coroutine at timestamp : " + Time.time);
-        game.loadNewLevel(Level);
-
     }
 }

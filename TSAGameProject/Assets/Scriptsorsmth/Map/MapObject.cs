@@ -202,7 +202,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
     {
         players = FindObjectOfType<Game>().players;
         
-        
+        //FindObjectOfType<DroneMove>().locList.Clear();
         if(this.tag == "DroneLocation"){
             FindObjectOfType<DroneMove>().locList.Add(this.gameObject);
         } 

@@ -98,13 +98,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &519262889689054034
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,13 +258,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &1160306200411831042
@@ -5425,7 +5435,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -5433,6 +5443,11 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever4
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &1131785928903010415
 GameObject:
   m_ObjectHideFlags: 0
@@ -5581,13 +5596,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &2058300034205738137
@@ -10592,13 +10612,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &1639825091935192070
 GameObject:
   m_ObjectHideFlags: 0
@@ -10697,13 +10722,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &1721552869123771108
 GameObject:
   m_ObjectHideFlags: 0
@@ -10852,13 +10882,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &8036682080091316414
@@ -15945,13 +15980,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &1889666319155569773
 GameObject:
   m_ObjectHideFlags: 0
@@ -21471,13 +21511,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &2042380461425756647
 GameObject:
   m_ObjectHideFlags: 0
@@ -21595,13 +21640,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &2283980756182141473
 GameObject:
   m_ObjectHideFlags: 0
@@ -21748,13 +21798,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &2296956200375428276
 GameObject:
   m_ObjectHideFlags: 0
@@ -21903,13 +21958,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &1152330973817331268
@@ -26916,13 +26976,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &722006108760208356
@@ -31879,13 +31944,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &2695942728927108067
 GameObject:
   m_ObjectHideFlags: 0
@@ -32034,13 +32104,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &2638794851564296610
@@ -36997,13 +37072,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &2844400960688005110
 GameObject:
   m_ObjectHideFlags: 0
@@ -37299,13 +37379,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &2955500689673116961
 GameObject:
   m_ObjectHideFlags: 0
@@ -37404,13 +37489,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &3061468635021428150
 GameObject:
   m_ObjectHideFlags: 0
@@ -41406,13 +41496,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &3232454338611042123
 GameObject:
   m_ObjectHideFlags: 0
@@ -41561,13 +41656,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &4786851962374242193
@@ -46521,7 +46621,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 1
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -46529,6 +46629,11 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever2
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &3462684973049039504
 GameObject:
   m_ObjectHideFlags: 0
@@ -46627,13 +46732,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &3487240898704132528
 GameObject:
   m_ObjectHideFlags: 0
@@ -46729,7 +46839,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 1
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -46737,6 +46847,11 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever5
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &3628589914391322151
 GameObject:
   m_ObjectHideFlags: 0
@@ -46967,13 +47082,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &690819249861767486
@@ -51980,13 +52100,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &8681883916079378464
@@ -57070,7 +57195,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -57078,6 +57203,11 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever6
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &4409462818833376952
 GameObject:
   m_ObjectHideFlags: 0
@@ -57176,13 +57306,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &4760933301215348958
 GameObject:
   m_ObjectHideFlags: 0
@@ -57446,13 +57581,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &4855060962137374086
 GameObject:
   m_ObjectHideFlags: 0
@@ -57525,6 +57665,10 @@ Transform:
   - {fileID: 2614291527886100676}
   - {fileID: 2087721898162738689}
   - {fileID: 7783153668013388909}
+  - {fileID: 5089530208108265768}
+  - {fileID: 4171191164442586115}
+  - {fileID: 8911067214397699100}
+  - {fileID: 6028621396877308413}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7095449955561416608
@@ -58109,13 +58253,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &4615848683629361455
@@ -63069,7 +63218,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -63077,6 +63226,11 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever3
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &6176075069253769892
 GameObject:
   m_ObjectHideFlags: 0
@@ -63175,13 +63329,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &6322927318196569292
 GameObject:
   m_ObjectHideFlags: 0
@@ -63540,13 +63699,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &6776953661110628803
 GameObject:
   m_ObjectHideFlags: 0
@@ -63823,13 +63987,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &7039577503743523313
 GameObject:
   m_ObjectHideFlags: 0
@@ -63976,13 +64145,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &7100637449941823086
 GameObject:
   m_ObjectHideFlags: 0
@@ -64131,13 +64305,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &3410782333949131321
@@ -69176,13 +69355,18 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &7743528201689385292
 GameObject:
   m_ObjectHideFlags: 0
@@ -69495,13 +69679,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &7302193905178610453
@@ -74508,13 +74697,18 @@ MonoBehaviour:
   isCollidableEditor: 1
   <isActive>k__BackingField: 0
   <isInteractable>k__BackingField: 0
-  <interactableType>k__BackingField: 0
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 0
   <isSingleUse>k__BackingField: 0
   <interactRange>k__BackingField: 0
   <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
   isBroken: 0
   mat: {fileID: 2100000, guid: 6397c173c588f6e409817d615cd8a599, type: 2}
 --- !u!198 &1507625113548129837
@@ -79468,7 +79662,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 0
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -79476,6 +79670,11 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever1
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
 --- !u!1 &9216919275921911082
 GameObject:
   m_ObjectHideFlags: 0
@@ -79571,7 +79770,7 @@ MonoBehaviour:
   isCollidableEditor: 0
   <isActive>k__BackingField: 1
   <isInteractable>k__BackingField: 1
-  <interactableType>k__BackingField: 1
+  interactableType: 0
   <interactPlayer>k__BackingField: 1
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
@@ -79579,3 +79778,260 @@ MonoBehaviour:
   <interactRange>k__BackingField: 0.5
   <triggerFlag>k__BackingField:
   - Lever7
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+--- !u!1001 &1957419107565914781
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4890873783931321335}
+    m_Modifications:
+    - target: {fileID: 288048285754448767, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_Name
+      value: Spawn (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.599421
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+--- !u!4 &6028621396877308413 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5225250299986819936, guid: be7a267426b50604ba434168ae8bb2e6, type: 3}
+  m_PrefabInstance: {fileID: 1957419107565914781}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3986180237119537367
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4890873783931321335}
+    m_Modifications:
+    - target: {fileID: 2229234398275962704, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_Name
+      value: DroneWaypoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.5389385
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24273461
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9000738
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+--- !u!4 &5089530208108265768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+  m_PrefabInstance: {fileID: 3986180237119537367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6004144879151035254
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4890873783931321335}
+    m_Modifications:
+    - target: {fileID: 4845148228795698484, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_Name
+      value: LevelEnd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7457708346718026439, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: Level
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2022994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.6386971
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+--- !u!4 &4171191164442586115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
+  m_PrefabInstance: {fileID: 6004144879151035254}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8037065558275083445
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4890873783931321335}
+    m_Modifications:
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.599421
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945558716144693515, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+      propertyPath: m_Name
+      value: Spawn
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+--- !u!4 &8911067214397699100 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1451035254118594729, guid: 7935e9b77b32847468ea2f40d1127239, type: 3}
+  m_PrefabInstance: {fileID: 8037065558275083445}
+  m_PrefabAsset: {fileID: 0}

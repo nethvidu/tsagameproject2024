@@ -35,7 +35,7 @@ public class PlayerControllerRB2D : MonoBehaviour
     [field: SerializeField]
     public float Velocity { get; private set; } // Can only be set by this class
     public GameObject Avatar;
-    public ParticleSystem dust;
+
 
     private int direction;
     [field: SerializeField]
@@ -201,10 +201,6 @@ public class PlayerControllerRB2D : MonoBehaviour
             
         }
     }
-    void CreateDust()
-    {
-        dust.Play();
-    }
     void Dash()
     {
         isDashing = true;
@@ -213,7 +209,7 @@ public class PlayerControllerRB2D : MonoBehaviour
         dashCount++;
         rb2D.gravityScale = dashGravity;
         sign = Vector2.Angle(Vector2.up, lastMove);
-        rb2D.velocity = (rb2D.velocity + lastMove*dashForce);// * 10 is dash force, fix later
+        rb2D.velocity = (rb2D.velocity + lastMove*dashForce);
         lastMove = new Vector2(0, 0);
         lastTime = Time.time;
         movePress = "";

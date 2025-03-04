@@ -10,7 +10,7 @@ public class DroneSpawnCollider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        droneMove.animator.Play("DroneInactive", -1, 0.0f);
+        
         collider = GetComponent<BoxCollider2D>();
     }
 
