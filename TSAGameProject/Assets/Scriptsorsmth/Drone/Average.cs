@@ -38,5 +38,6 @@ public class Average: MonoBehaviour
             transform.position = averagePosition + new Vector3(0,1,0);
             
         }
+
     }
 }

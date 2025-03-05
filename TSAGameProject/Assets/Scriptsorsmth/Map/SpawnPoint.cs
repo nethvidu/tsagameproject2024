@@ -19,9 +19,13 @@ public class SpawnPoint : MonoBehaviour
         game = FindObjectOfType<Game>();
         players = game.players;
         if(PlayerToSpawn == Players.Player1){
-            players[0].playerStart = transform.position;
+            players[0].transform.position = transform.position;
+            players[0].fall = true;
+            players[0].animator.Play("Fall");
         } else if(PlayerToSpawn == Players.Player2){
-            players[1].playerStart = transform.position;
+            players[1].transform.position = transform.position;
+            players[1].fall = true;
+            players[1].animator.Play("Fall");
         }
         
         
