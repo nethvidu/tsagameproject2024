@@ -20,8 +20,10 @@ public class SpawnPoint : MonoBehaviour
         players = game.players;
         if(PlayerToSpawn == Players.Player1){
             players[0].playerStart = transform.position;
+            //players[0].transform.position = transform.position;
         } else if(PlayerToSpawn == Players.Player2){
             players[1].playerStart = transform.position;
+            //players[1].transform.position = transform.position;
         }
         
         

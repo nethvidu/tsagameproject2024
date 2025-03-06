@@ -67,7 +67,6 @@ public class PlayerControllerRB2D : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>(); // Set reference to rigidbody
-        transform.position = playerStart;
         moveAction = InputSystem.actions.FindAction(MoveInput);
         Health = 100f; // Placeholder
         jumpAction = InputSystem.actions.FindAction(JumpInput);

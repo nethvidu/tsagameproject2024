@@ -14,6 +14,7 @@ public class Game : MonoBehaviour
     public LevelEnd levelend;
     public bool levelLoaded;
     public DroneMove drone;
+    public bool bruh;
     public Animator transition;
 
 
@@ -30,7 +31,11 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(bruh){
+            players[0].SpawnPlayer();
+            players[1].SpawnPlayer();
+            bruh = false;
+        }
     }
 
     private IEnumerator updateFPS()
@@ -47,9 +52,9 @@ public class Game : MonoBehaviour
         transform.parent.GetComponentInChildren<LevelScript>().LevelStart();
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
+        bruh = true;
         levelLoaded = true;
-        players[0].SpawnPlayer();
-        players[1].SpawnPlayer();
+        
     }
 
     public void loadNewLevel(Levels.Level levelToLoad)
@@ -74,6 +79,7 @@ public class Game : MonoBehaviour
         levelClear();
         Debug.Log("Ended Coroutine at timestamp : " + Time.time);
         loadNewLevel(loadLevel);
+        
 
     }
 }
