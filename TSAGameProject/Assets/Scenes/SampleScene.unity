@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1619612377}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 237.9236
+    OrthographicSize: 4.035638
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1423,7 +1423,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 237.9236
+  orthographic size: 4.035638
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6958,6 +6958,7 @@ MonoBehaviour:
   levelend: {fileID: 0}
   levelLoaded: 0
   drone: {fileID: 0}
+  bruh: 0
   transition: {fileID: 0}
 --- !u!4 &1020806813
 Transform:

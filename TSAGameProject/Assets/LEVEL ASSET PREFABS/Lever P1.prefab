@@ -100,12 +100,15 @@ MonoBehaviour:
   <interactButton>k__BackingField: 0
   <interactTime>k__BackingField: 2
   <isSingleUse>k__BackingField: 1
-  <interactRange>k__BackingField: 0.5
+  <interactRange>k__BackingField: 2.8
   <triggerFlag>k__BackingField:
   - Lever1
   PressurePlateActuationMass: 0
   FreebodyMass: 0
   PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+  DistanceToPlayer: 0
 --- !u!1 &4882468172898442878
 GameObject:
   m_ObjectHideFlags: 0

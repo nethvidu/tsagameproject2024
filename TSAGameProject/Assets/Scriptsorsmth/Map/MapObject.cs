@@ -87,6 +87,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
 
     [ConditionalField("DoorIsTriggered", false)]
     public string DoorFlagTriggeredBy;
+    public float DistanceToPlayer;
 
 
 
@@ -241,6 +242,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
                 if (interactPlayer == PlayerToInteract.Player1) {
                     RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "↓";
                     float dist = Vector3.Distance(transform.position, players[0].transform.position);
+                    DistanceToPlayer = dist;
                     RadialProgress.transform.localScale = Vector3.zero;
                     if (dist <= interactRange)
                     {
@@ -257,6 +259,7 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
                     RadialProgress.transform.position = GameObject.FindWithTag("MainCamera").GetComponent<Camera>().WorldToScreenPoint(this.transform.position);
                     RadialProgress.transform.Find("Key").GetComponent<TMP_Text>().text = "S";
                     float dist = Vector3.Distance(transform.position, players[1].transform.position);
+                    DistanceToPlayer = dist;
                     RadialProgress.transform.localScale = Vector3.zero;
                     if (dist <= interactRange)
                     {

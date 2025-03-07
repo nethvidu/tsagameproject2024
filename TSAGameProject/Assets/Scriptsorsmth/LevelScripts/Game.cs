@@ -53,6 +53,7 @@ public class Game : MonoBehaviour
         StartCoroutine(transform.parent.GetComponentInChildren<LevelScript>().TickLevel());
         StartCoroutine(updateFPS());
         bruh = true;
+        drone.text.text = "";
         levelLoaded = true;
         
     }
