@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BreakableObject : MapObject
+public class ReformableObject : MapObject
 {
     public bool isBroken;
-    public Material mat;
+    public bool reform;
     public Vector2 startpos;
-    public SpriteRenderer spr;
+    public Material mat;
+    SpriteRenderer spr;
+
     void Update()
     {
-        
+
     }
 
     void Start()
@@ -22,14 +24,21 @@ public class BreakableObject : MapObject
     public void Break(GameObject hitObject)
     {
         if (!isBroken) {
-           
             isBroken = true;
-            isCollidable = false;
-            spr.enabled = true; 
-            GetComponent<ParticleSystem>().Play();
-            spr.enabled = false;
-            FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+            GetComponent<ParticleSystemRenderer>().material = mat;
+            StartCoroutine(Reform(hitObject));
         }
+    }
+    private IEnumerator Reform(GameObject player)
+    {
+        GetComponent<ParticleSystem>().Play();
+        spr.enabled = false;
+        Physics2D.IgnoreCollision(player.GetComponent<CapsuleCollider2D>(), GetComponent<BoxCollider2D>(), true);
+        yield return new WaitForSeconds(0.6f);
+        spr.enabled = true;
+        Physics2D.IgnoreCollision(player.GetComponent<CapsuleCollider2D>(), GetComponent<BoxCollider2D>(), false);
+        isBroken = false;
+        yield break;
     }
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -45,5 +54,7 @@ public class BreakableObject : MapObject
                yield return new WaitForSeconds(0.01f);
            }
      }
+
+
 }
     

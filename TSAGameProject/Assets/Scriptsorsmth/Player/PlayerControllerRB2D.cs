@@ -177,7 +177,9 @@ public class PlayerControllerRB2D : MonoBehaviour
             {
                 if (a.GetComponent<BreakableObject>() != null)
                 {
-                    a.GetComponent<BreakableObject>().Break();
+                    a.GetComponent<BreakableObject>().Break(this.gameObject);
+                } else if (a.GetComponent<ReformableObject>() != null){
+                    a.GetComponent<ReformableObject>().Break(this.gameObject);
                 }
             });
         }

@@ -69,7 +69,7 @@ public class Game : MonoBehaviour
     public void levelClear()
     {
         levelLoaded = false;
-        Destroy(this.transform.parent.Find("Level").Find("CameraBounds(Clone)").gameObject);
+        lvlMgr.destroyMap();
     }
     public IEnumerator LevelTransition(Levels.Level loadLevel)
     {
