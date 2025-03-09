@@ -221,5 +221,9 @@ public class PlayerControllerRB2D : MonoBehaviour
     {
         transform.position = playerStart;
     }
+    public void SpawnPlayer(Vector3 SpawnPlace)
+    {
+        transform.position = SpawnPlace;
+    }
     
 }

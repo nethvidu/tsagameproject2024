@@ -44,6 +44,6 @@ public class BreakableObject : MapObject
                spr.gameObject.transform.position = startpos + new Vector2(Random.Range(-0.02f,0.02f),Random.Range(-0.02f,0.02f));
                yield return new WaitForSeconds(0.01f);
            }
-     }
+    }
 }
     
