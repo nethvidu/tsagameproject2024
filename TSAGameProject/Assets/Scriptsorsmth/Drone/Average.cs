@@ -25,17 +25,22 @@ public class Average: MonoBehaviour
         if (objectA != null && objectB != null && objectC != null)
         {
             // Calculate the midpoint
-            if(Vector2.Distance((objectA.position + objectB.position) / 2, objectC.position) < 5){
-                averagePosition = (objectA.position + objectB.position + objectC.position) / 3;
-                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/6+(distance), Time.deltaTime * 2);
+            if(distance > 25f){
+                averagePosition = (objectA.position.y > objectB.position.y) ? objectA.position : objectB.position;
+                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/5, Time.deltaTime * 2);
             } else {
-                averagePosition = (objectA.position + objectB.position) / 2;
-                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/6+(distance), Time.deltaTime * 2);
+                if(Vector2.Distance((objectA.position + objectB.position) / 2, objectC.position) < 5){
+                    averagePosition = (objectA.position + objectB.position + objectC.position) / 3;
+                    Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/6+(distance), Time.deltaTime * 2);
+                } else {
+                    averagePosition = (objectA.position + objectB.position) / 2;
+                    Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/6+(distance), Time.deltaTime * 2);
+                }
             }
             distance = Vector2.Distance(objectA.position, objectB.position);
 
             // Place the target object at the midpoint
-            transform.position = averagePosition + new Vector3(0,0.7f,0);
+            transform.position = averagePosition + new Vector3(0, distance/70f,0);
             
         }
     }

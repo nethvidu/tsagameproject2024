@@ -5,9 +5,11 @@ using UnityEngine;
 public class BreakableObject : MapObject
 {
     public bool isBroken;
+    public int breakCount = 0;
     public Material mat;
     public Vector2 startpos;
     public SpriteRenderer spr;
+    public Sprite BrokenSprite;
     void Update()
     {
         
@@ -22,13 +24,19 @@ public class BreakableObject : MapObject
     public void Break(GameObject hitObject)
     {
         if (!isBroken) {
-           
-            isBroken = true;
-            isCollidable = false;
-            spr.enabled = true; 
-            GetComponent<ParticleSystem>().Play();
-            spr.enabled = false;
-            FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+            breakCount++;
+            Debug.Log(breakCount);
+            if(breakCount > 1){
+                isBroken = true;
+                isCollidable = false;
+                spr.enabled = true; 
+                GetComponent<ParticleSystem>().Play();
+                spr.enabled = false;
+                FindObjectOfType<LevelScript>().triggerFlag(triggerFlag);
+            } else {
+                spr.sprite = BrokenSprite;
+                StartCoroutine(Tremble());
+            }
         }
     }
     void OnCollisionEnter2D(Collision2D col)
