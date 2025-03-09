@@ -16,11 +16,14 @@ public class Game : MonoBehaviour
     public DroneMove drone;
     public bool bruh;
     public Animator transition;
+    public UnityEngine.Video.VideoPlayer vid;
 
 
     void Start()
     {
         transition = GameObject.Find("UI").GetComponent<Animator>();
+        vid = GameObject.Find("UI").GetComponent<UnityEngine.Video.VideoPlayer>();
+
         drone = FindFirstObjectByType<DroneMove>();
         UIManager = FindObjectOfType<UI_Manager>();
         lvlMgr = FindObjectOfType<LevelManager>(); 
@@ -75,13 +78,14 @@ public class Game : MonoBehaviour
     {
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         transition.Play("Crossfade_Start", -1, 0.0f);
-        yield return new WaitForSecondsRealtime((1f / Time.deltaTime)/70f);
+        vid.frame = 0;
+        yield return new WaitForSeconds(0.14f);
+        vid.Play();
         drone.locList.Clear();
+        yield return new WaitForSeconds(0.76f);
         levelClear();
-        Debug.Log("Ended Coroutine at timestamp : " + Time.time);
         loadNewLevel(loadLevel);
         
-
     }
 }
  

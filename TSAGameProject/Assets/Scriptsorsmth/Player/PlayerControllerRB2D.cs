@@ -62,6 +62,7 @@ public class PlayerControllerRB2D : MonoBehaviour
     public Vector2 lastMove = new Vector2(0,0);
 
     public Vector3 playerStart = new Vector3(0,0,0);
+    public bool enabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -69,6 +70,7 @@ public class PlayerControllerRB2D : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>(); // Set reference to rigidbody
         moveAction = InputSystem.actions.FindAction(MoveInput);
         Health = 100f; // Placeholder
+        animator.Play("Fall");
         jumpAction = InputSystem.actions.FindAction(JumpInput);
         moveAction.Enable();
         moveAction.started += context => {
@@ -87,84 +89,86 @@ public class PlayerControllerRB2D : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-        move = moveAction.ReadValue<Vector2>();
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 100, ground);
-        Debug.DrawRay(transform.position, Vector2.down * 100, Color.red);
-        if(move.magnitude > 0){
-            lastMove = move;
-        }
-        if(rb2D.velocity.y < 0.001f)
-        {
-            fall = true;
-            jump = false;
-        }
-        if(isGrounded && !jump)
-        {
-            jump = false;
-            fall = false;
-        }
-        if (isDashing && Time.time-lastTime >= dashLength){ // 0.2 is dash length, fix later
-            rb2D.velocity = rb2D.velocity * 0.2f; //Slow player at end of dash
-            rb2D.gravityScale = 1; //reset gravity
-            transform.eulerAngles = new Vector3(0, 0, 0); //reset rotation
-            if(direction == 1) {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x),transform.localScale.y,2);
+        if(enabled){
+            move = moveAction.ReadValue<Vector2>();
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 100, ground);
+            Debug.DrawRay(transform.position, Vector2.down * 100, Color.red);
+            if(move.magnitude > 0){
+                lastMove = move;
             }
-            else if(direction == -1) {
-                transform.localScale = new Vector3(-(Mathf.Abs(transform.localScale.x)),transform.localScale.y,2);
-            }
-            isDashing = false;
-            
-        }
-        if(hit.collider != null && (movePress != "") || (movePress != null)){
-            if (movePress == "Tap" && !isDashing)
+            if(rb2D.velocity.y < 0.001f)
             {
-                tapCount++;
-                if(tapCount == 1){
-                    timeLastPress = Time.time;
+                fall = true;
+                jump = false;
+            }
+            if(isGrounded && !jump)
+            {
+                jump = false;
+                fall = false;
+            }
+            if (isDashing && Time.time-lastTime >= dashLength){ // 0.2 is dash length, fix later
+                rb2D.velocity = rb2D.velocity * 0.2f; //Slow player at end of dash
+                rb2D.gravityScale = 1; //reset gravity
+                transform.eulerAngles = new Vector3(0, 0, 0); //reset rotation
+                if(direction == 1) {
+                    transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x),transform.localScale.y,2);
                 }
+                else if(direction == -1) {
+                    transform.localScale = new Vector3(-(Mathf.Abs(transform.localScale.x)),transform.localScale.y,2);
+                }
+                isDashing = false;
                 
+            }
+            if(hit.collider != null && (movePress != "") || (movePress != null)){
+                if (movePress == "Tap" && !isDashing)
+                {
+                    tapCount++;
+                    if(tapCount == 1){
+                        timeLastPress = Time.time;
+                    }
+                    
 
-                if (isGrounded && lastMove.y > 0  && !(jump))
-                {
-                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + jumpHeight/2);
-                    jump = true;
-                    dashCount = 0;
+                    if (isGrounded && lastMove.y > 0  && !(jump))
+                    {
+                        rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + jumpHeight/2);
+                        jump = true;
+                        dashCount = 0;
+                        movePress = "";
+                        tapCount = 0;
+                    } else if(dashCount <= dashLimit && tapCount > 1) {
+                        Dash();
+                    }
                     movePress = "";
-                    tapCount = 0;
-                } else if(dashCount <= dashLimit && tapCount > 1) {
-                    Dash();
                 }
-                movePress = "";
-            }
-            else if (movePress == "Hold" && !isDashing)
-            {
-                 if (isGrounded && lastMove.y > 0  && !(jump))
+                else if (movePress == "Hold" && !isDashing)
                 {
-                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + jumpHeight);
-                    jump = true;
-                    dashCount = 0;
-                    movePress = "";
-                    tapCount = 0;
-                }
-                if (Mathf.Abs(rb2D.velocity.x) <= Max_Speed && Mathf.Abs(move.x) > 0)
-                {
-                    rb2D.AddForce(Vector3.ProjectOnPlane(Vector2.right, hit.normal) * (move.x * Accel), ForceMode2D.Impulse);
-                }
-                else
-                {
-                    rb2D.AddForce(-rb2D.velocity.x * Decel * Vector3.ProjectOnPlane(Vector2.right, hit.normal), ForceMode2D.Impulse);
+                    if (isGrounded && lastMove.y > 0  && !(jump))
+                    {
+                        rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y + jumpHeight);
+                        jump = true;
+                        dashCount = 0;
+                        movePress = "";
+                        tapCount = 0;
+                    }
+                    if (Mathf.Abs(rb2D.velocity.x) <= Max_Speed && Mathf.Abs(move.x) > 0)
+                    {
+                        rb2D.AddForce(Vector3.ProjectOnPlane(Vector2.right, hit.normal) * (move.x * Accel), ForceMode2D.Impulse);
+                    }
+                    else
+                    {
+                        rb2D.AddForce(-rb2D.velocity.x * Decel * Vector3.ProjectOnPlane(Vector2.right, hit.normal), ForceMode2D.Impulse);
+                    }
                 }
             }
+            if(Time.time - timeLastPress >= dashForgiveness && tapCount >= 1){
+                tapCount = 0;
+                dashCount = 0;
+            } 
+            isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, ground);
+            AnimateAvatar();
         }
-        if(Time.time - timeLastPress >= dashForgiveness && tapCount >= 1){
-            tapCount = 0;
-            dashCount = 0;
-        } 
-        isGrounded = Physics2D.OverlapCircle((Vector2)transform.position - new Vector2(0, groundCheckOffset), groundCheckRadius, ground);
-        AnimateAvatar();
     }
+        
 
     void Update()
     {
@@ -179,10 +183,12 @@ public class PlayerControllerRB2D : MonoBehaviour
                     a.GetComponent<BreakableObject>().Break(this.gameObject);
                     isDashing = false;
                     rb2D.gravityScale = 1;
+                    rb2D.velocity = rb2D.velocity * 0.2f;
                 } else if (a.GetComponent<ReformableObject>() != null && isDashing){
                     a.GetComponent<ReformableObject>().Break(this.gameObject);
                     isDashing = false;
                     rb2D.gravityScale = 1;
+                    rb2D.velocity = rb2D.velocity * 0.2f;
                 }
             });
         }
@@ -223,10 +229,12 @@ public class PlayerControllerRB2D : MonoBehaviour
     public void SpawnPlayer()
     {
         transform.position = playerStart;
+        animator.Play("Fall");
     }
     public void SpawnPlayer(Vector3 SpawnPlace)
     {
         transform.position = SpawnPlace;
+        animator.Play("Fall");
     }
     
 }

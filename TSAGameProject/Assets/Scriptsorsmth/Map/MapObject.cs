@@ -285,13 +285,13 @@ public class MapObject : MonoBehaviour // ADD THIS COMPONENT TO EACH OBJECT WITH
                 {
                     if (transform.position.y < (float)internalFlags[1] + 1.4f)
                     {
-                        transform.position += new Vector3(0f, Time.deltaTime, 0f);
+                        transform.position += transform.up*Time.deltaTime;
                     }
                 }
                 if (!(bool)internalFlags[0]) {
                     if (transform.position.y > (float)internalFlags[1])
                     {
-                        transform.position -= new Vector3(0f, Time.deltaTime, 0f);
+                        transform.position -= transform.up*Time.deltaTime;
                     } 
                 }
                 transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, (float)internalFlags[1], (float)internalFlags[1] + 1.4f), transform.position.z);

@@ -7,7 +7,7 @@ public class LevelEnd : MonoBehaviour
     // Start is called before the first frame update
     public Levels.Level Level = Levels.Level.id03; 
     public Game game;
-    public bool test = false;
+    public bool triggered = false;
     private bool player1 = false;
     private bool player2 = false;
     public BoxCollider2D collider;
@@ -39,11 +39,10 @@ public class LevelEnd : MonoBehaviour
             player2 = true;
             
         } 
-        if(player1 && player2){
-            //StartCoroutine(LevelTransition());
-            //game.levelClear();
-            //game.loadNewLevel(Level);
+        if(player1 && player2 && !triggered){
+            
             StartCoroutine(game.LevelTransition(Level));
+            triggered = true;
             player1 = false;
             player2 = false;
         }
