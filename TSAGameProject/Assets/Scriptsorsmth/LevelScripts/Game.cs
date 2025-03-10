@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
     public bool bruh;
     public Animator transition;
     public UnityEngine.Video.VideoPlayer vid;
+    public TextMeshProUGUI text;
 
 
     void Start()
@@ -28,6 +29,7 @@ public class Game : MonoBehaviour
         UIManager = FindObjectOfType<UI_Manager>();
         lvlMgr = FindObjectOfType<LevelManager>(); 
         lvlMgr.loadMap(lvlMgr.getReferenceToLevel(level));
+        text = transition.transform.GetComponentsInChildren<TextMeshProUGUI>()[2];
         this.startLevel();
     }
 
@@ -79,10 +81,11 @@ public class Game : MonoBehaviour
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         transition.Play("Crossfade_Start", -1, 0.0f);
         vid.frame = 0;
-        yield return new WaitForSeconds(0.14f);
+        text.text = "Level " + loadLevel.ToString();
+        yield return new WaitForSeconds(0.10f);
         vid.Play();
         drone.locList.Clear();
-        yield return new WaitForSeconds(0.76f);
+        yield return new WaitForSeconds(5.76f);
         levelClear();
         loadNewLevel(loadLevel);
         

@@ -27,7 +27,7 @@ public class Average: MonoBehaviour
             // Calculate the midpoint
             if(distance > 25f){
                 averagePosition = (objectA.position.y > objectB.position.y) ? objectA.position : objectB.position;
-                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/5, Time.deltaTime * 2);
+                Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/2, Time.deltaTime * 2);
             } else {
                 if(Vector2.Distance((objectA.position + objectB.position) / 2, objectC.position) < 5){
                     averagePosition = (objectA.position + objectB.position + objectC.position) / 3;

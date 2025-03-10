@@ -27,9 +27,10 @@ public class Death : MonoBehaviour
     }
     public IEnumerator Blink(Collider2D col)
     {
-        
+        col.transform.GetComponent<PlayerControllerRB2D>().enabled = false;
         col.GetComponentInChildren<Animator>().Play("Damage", -1, 0.0f);
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSeconds(1f);
+        col.transform.GetComponent<PlayerControllerRB2D>().enabled = true;
         col.GetComponentInChildren<Animator>().Play("Idle", -1, 0.0f);
         yield break;
     }

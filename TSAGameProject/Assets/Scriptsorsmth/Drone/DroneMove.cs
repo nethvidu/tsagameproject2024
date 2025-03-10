@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+//using System;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
@@ -22,6 +23,7 @@ public class DroneMove : MonoBehaviour
     public bool Active;
     public List<GameObject> locList = new List<GameObject>();
     public Animator animator;
+
     void Start()
     {
         playerOfInterest = Random.Range(0,1);
@@ -31,10 +33,14 @@ public class DroneMove : MonoBehaviour
 
     // Update is called once per frame
     
-    void Update()
+    void Update() 
     {
         if(locList != null){
-            Move(EvaluateMove());
+            try{
+                Move(EvaluateMove());
+            } catch {
+
+            }
         }
         switch (playerOfInterest)
         {

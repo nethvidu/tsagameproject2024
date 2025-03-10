@@ -175,7 +175,7 @@ public class PlayerControllerRB2D : MonoBehaviour
         
         if (isDashing && transform.name == "Player2")
         {
-            Collider2D[] a = Physics2D.OverlapBoxAll(transform.position + new Vector3(direction * 0.5f, 0f , 0f), new Vector2(0.5f, 1.2f), 35);
+            Collider2D[] a = Physics2D.OverlapBoxAll(transform.position + new Vector3(direction * 0.5f, -0.5f, 0f), new Vector2(0.5f, 1.2f), 35);
             a.ToList().ForEach(delegate(Collider2D a)
             {
                 if (a.GetComponent<BreakableObject>() != null && isDashing)
@@ -188,7 +188,6 @@ public class PlayerControllerRB2D : MonoBehaviour
                     a.GetComponent<ReformableObject>().Break(this.gameObject);
                     isDashing = false;
                     rb2D.gravityScale = 1;
-                    rb2D.velocity = rb2D.velocity * 0.2f;
                 }
             });
         }
