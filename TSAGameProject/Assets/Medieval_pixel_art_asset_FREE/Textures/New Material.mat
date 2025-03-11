@@ -8,12 +8,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material
-  m_Shader: {fileID: 4800000, guid: dd89cf5b9246416f84610a006f916af7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - BEVEL_ON
-  - GLOW_ON
   - UNDERLAY_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -64,7 +62,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
         m_Texture: {fileID: 2800000, guid: 2b8ca6a4e0f573c419ce674896bb4fab, type: 3}
-        m_Scale: {x: 1, y: 0.1}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HologramTex:
         m_Texture: {fileID: 2800000, guid: 8ef4f2c183fc7634a9c9cda2edc35c87, type: 3}
@@ -95,7 +93,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 2800000, guid: 2b8ca6a4e0f573c419ce674896bb4fab, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -141,35 +139,35 @@ Material:
     - _EmissionScaleUI: 1
     - _EnableExternalAlpha: 0
     - _Exposure: 1.3
-    - _FaceDilate: -0.506
+    - _FaceDilate: 0
     - _FaceUVSpeedX: 0
-    - _FaceUVSpeedY: 0
+    - _FaceUVSpeedY: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GlowInner: 0.089
-    - _GlowOffset: 0.254
-    - _GlowOuter: 0.26
-    - _GlowPower: 0.304
+    - _GlowInner: 0.05
+    - _GlowOffset: 0
+    - _GlowOuter: 0.05
+    - _GlowPower: 0.75
     - _GradientScale: 5
     - _InvFade: 1
-    - _LightAngle: 4.64
+    - _LightAngle: 3.1416
     - _Lightmapping: 1
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineSoftness: 0.605
+    - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0
+    - _OutlineWidth: 0.012
     - _Parallax: 0.02
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.8
-    - _ScaleRatioB: 1.1048
-    - _ScaleRatioC: 0.5524
+    - _ScaleRatioB: 0.65
+    - _ScaleRatioC: 0.325
     - _ScaleX: 1
     - _ScaleY: 1
     - _ScrollSpeed: 0.08
@@ -192,12 +190,12 @@ Material:
     - _TextureWidth: 512
     - _UVSec: 0
     - _UnderlayDilate: 1
-    - _UnderlayOffsetX: 0.051
+    - _UnderlayOffsetX: 0.187
     - _UnderlayOffsetY: -1
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
-    - _WeightBold: 0.5
+    - _WeightBold: 0.75
     - _WeightNormal: 0
     - _ZWrite: 1
     m_Colors:
@@ -208,13 +206,13 @@ Material:
     - _EmissionColorUI: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColorWithMapUI: {r: 1, g: 1, b: 1, a: 1}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 0.20392154, g: 0.9137255, b: 0.6756159, a: 1}
+    - _FaceColor: {r: 0, g: 1, b: 0.83468914, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0.75677896, a: 0.5}
+    - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _GroundColor: {r: 0.369, g: 0.349, b: 0.341, a: 1}
     - _HologramColor: {r: 1, g: 0.4516129, b: 0, a: 1}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.7735849, g: 0.4904819, b: 0.33935562, a: 1}
+    - _OutlineColor: {r: 0.087931626, g: 0.9811321, b: 0.67905504, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
