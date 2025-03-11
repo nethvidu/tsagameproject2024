@@ -14,7 +14,7 @@ public class WaypointLogic : MonoBehaviour
     DroneMove Drone;
 
     public bool shouldUpdateText;
-    private bool nodeAccessed;
+    public bool nodeAccessed;
     public string newText;
     // Start is called before the first frame update
     void Start()

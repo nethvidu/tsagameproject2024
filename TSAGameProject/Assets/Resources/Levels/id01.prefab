@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &1398667828757817699
 GameObject:
@@ -211,7 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 1
-  newText: Allant
+  nodeAccessed: 0
+  newText: 
 --- !u!1 &1869600091185840639
 GameObject:
   m_ObjectHideFlags: 0
@@ -6144,6 +6146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &2027875963542436408
 GameObject:
@@ -6219,6 +6222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &2652820692696159068
 GameObject:
@@ -6294,6 +6298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &2722212356259692285
 GameObject:
@@ -6690,6 +6695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &3061468635021428150
 GameObject:
@@ -29201,6 +29207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &4471969127846806774
 GameObject:
@@ -29276,6 +29283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &4521085235940207802
 GameObject:
@@ -29351,6 +29359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &4644493153128091795
 GameObject:
@@ -33166,6 +33175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &5644352759180449013
 GameObject:
@@ -33241,6 +33251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &5992946255949866760
 GameObject:
@@ -33316,6 +33327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &6188546282090858557
 GameObject:
@@ -33422,6 +33434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &6613948171265498795
 GameObject:
@@ -33573,6 +33586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &7368991890406122513
 GameObject:
@@ -33648,6 +33662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &7376469592041640296
 GameObject:
@@ -33723,6 +33738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &8914627714018195531
 GameObject:
@@ -34022,6 +34038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1 &9058560827220973611
 GameObject:
@@ -34097,6 +34114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldUpdateText: 0
+  nodeAccessed: 0
   newText: 
 --- !u!1001 &162090281411350748
 PrefabInstance:
@@ -34258,6 +34276,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4890873783931321335}
     m_Modifications:
+    - target: {fileID: 952119792925842377, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
+      propertyPath: newText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 952119792925842377, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
+      propertyPath: shouldUpdateText
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3170843007354091989, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.1953816
@@ -35300,6 +35326,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DroneWaypoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText
+      value: Saniru
+      objectReference: {fileID: 0}
     - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.83
@@ -35520,7 +35550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 107.5
+      value: 31.12
       objectReference: {fileID: 0}
     - target: {fileID: 7687659644946095989, guid: 0a0814484c3c5e148aa55df19231f57a, type: 3}
       propertyPath: m_LocalPosition.y
