@@ -25,7 +25,6 @@ public class ReformableObject : MapObject
     {
         if (!isBroken) {
             isBroken = true;
-            GetComponent<ParticleSystemRenderer>().material = mat;
             StartCoroutine(Reform(hitObject));
         }
     }
