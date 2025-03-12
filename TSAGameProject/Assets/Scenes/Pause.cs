@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
+    public bool pause;
+    CanvasGroup canvasGroup;
     // Start is called before the first frame update
     void Start()
     {
-        
+        canvasGroup = GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
@@ -16,7 +18,29 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MenuScene"); 
+            pause = !pause;
+        }
+        if(pause){
+            canvasGroup.alpha = 1;
+            Time.timeScale = 0;
+        } else {
+            canvasGroup.alpha = 0;
+            Time.timeScale = 1;
         }
     }
+    public void Menu()
+    {
+        SceneManager.LoadScene("MenuScene");
+        pause = false;
+    }
+    public void Quit()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; 
+        #else
+        Application.Quit(); 
+        #endif
+    }
+
+
 }
