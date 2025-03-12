@@ -5,12 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
-    public bool pause;
+    public Vector2 endLocation;
+    public bool pause = false;
     CanvasGroup canvasGroup;
     // Start is called before the first frame update
     void Start()
     {
         canvasGroup = GetComponent<CanvasGroup>();
+        endLocation = transform.position;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class Pause : MonoBehaviour
             canvasGroup.alpha = 0;
             Time.timeScale = 1;
         }
+        
     }
     public void Menu()
     {

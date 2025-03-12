@@ -67,6 +67,7 @@ public class DroneMove : MonoBehaviour
         return Closestpos;
     }
     public void Move(Vector2 endLocation){
+        transform.eulerAngles = new Vector3(0, 0, 0);
         transform.position = (Vector2.Lerp(transform.position, endLocation, Time.deltaTime));
     }
     
