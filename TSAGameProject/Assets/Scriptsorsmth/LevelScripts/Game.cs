@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Splines;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class Game : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class Game : MonoBehaviour
     {
         transition = GameObject.Find("UI").GetComponent<Animator>();
         vid = GameObject.Find("UI").GetComponent<UnityEngine.Video.VideoPlayer>();
-
+        string videoPath = System.IO.Path.Combine(Application.streamingAssetsPath, "LevelFallAnim.mp4");
+        vid.url = videoPath;
         drone = FindFirstObjectByType<DroneMove>();
         UIManager = FindObjectOfType<UI_Manager>();
         lvlMgr = FindObjectOfType<LevelManager>(); 
