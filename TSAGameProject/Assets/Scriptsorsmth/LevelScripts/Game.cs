@@ -83,7 +83,7 @@ public class Game : MonoBehaviour
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
         transition.Play("Crossfade_Start", -1, 0.0f);
         vid.frame = 0;
-        text.text = "Level " + loadLevel.ToString();
+        text.text = "Level " + loadLevel.ToString().Substring(loadLevel.ToString().Length-1);
         yield return new WaitForSeconds(0.10f);
         vid.Play();
         drone.locList.Clear();

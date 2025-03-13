@@ -17,6 +17,7 @@ public class DestroyBear : MonoBehaviour
         if(transform.position.y < -50){
             Debug.Log("this");
             average.objectC = GameObject.Find("Drone").transform;
+            
             GameObject.Destroy(this.gameObject);
         }
     }

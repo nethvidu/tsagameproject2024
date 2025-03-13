@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7538039887360991449}
   - component: {fileID: 318828921519114854}
   - component: {fileID: 7590899651238590717}
+  - component: {fileID: 8541801807763656290}
   m_Layer: 3
   m_Name: Moving Platform
   m_TagString: Moving Platform
@@ -61,6 +62,7 @@ MonoBehaviour:
   PickupObject: {fileID: 0}
   DoorIsTriggered: 0
   DoorFlagTriggeredBy: 
+  DistanceToPlayer: 0
   isMoving: 1
   <movementType>k__BackingField: 0
   <movementSpeed>k__BackingField: 1
@@ -167,3 +169,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 0.51537895}
   m_EdgeRadius: 0
+--- !u!114 &8541801807763656290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142432392758569820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ea61eaec6c74d64596ac5831787ed0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
