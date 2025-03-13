@@ -10,10 +10,12 @@ public class BearCollider : MonoBehaviour
     public Rigidbody2D Rb2D;
     bool player1;
     bool player2;
-    bool triggered;
+    bool triggered = false;
+    Average average;
     void Start()
     {
-
+        average = FindFirstObjectByType<Average>();
+        Rb2D.bodyType = RigidbodyType2D.Static;
     }
 
     // Update is called once per frame
@@ -33,8 +35,8 @@ public class BearCollider : MonoBehaviour
         } 
         if(player1 && player2 && !triggered){
             
-            triggered = true;
             Debug.Log("how");
+            average.objectC = Rb2D.transform;
             Rb2D.bodyType = RigidbodyType2D.Dynamic;
         }
     }
