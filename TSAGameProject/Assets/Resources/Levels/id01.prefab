@@ -138,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 140988130623407000}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72.56, y: -21.21, z: 1.9000738}
+  m_LocalPosition: {x: 72.56, y: -18.78, z: 1.9000738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -184,9 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 1
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - How did you get up here
 --- !u!1 &512011978420312674
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,9 +293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Climb onto the moving platform to get all the way up!
 --- !u!1 &843890582163956095
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,9 +371,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 1
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - You know, i'll call you, [Player1]..
+  - Shade
+  - Is that good?
 --- !u!1 &1229316510126210309
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,9 +535,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &1398667828757817699
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,9 +643,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &1761438725956625838
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,9 +720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &1803870671206898917
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,9 +797,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &1869600091185840639
 GameObject:
   m_ObjectHideFlags: 0
@@ -8863,8 +8875,8 @@ Tilemap:
   - first: {x: -1, y: -43, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 11
-      m_TileSpriteIndex: 11
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8873,8 +8885,8 @@ Tilemap:
   - first: {x: 0, y: -43, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8883,8 +8895,8 @@ Tilemap:
   - first: {x: 1, y: -43, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8893,8 +8905,8 @@ Tilemap:
   - first: {x: 2, y: -43, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8903,8 +8915,8 @@ Tilemap:
   - first: {x: 3, y: -43, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 12
+      m_TileIndex: 13
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8913,8 +8925,8 @@ Tilemap:
   - first: {x: -1, y: -42, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 22
-      m_TileSpriteIndex: 22
+      m_TileIndex: 9
+      m_TileSpriteIndex: 9
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8923,8 +8935,8 @@ Tilemap:
   - first: {x: 0, y: -42, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileIndex: 8
+      m_TileSpriteIndex: 8
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8933,8 +8945,8 @@ Tilemap:
   - first: {x: 1, y: -42, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
+      m_TileIndex: 24
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8943,18 +8955,8 @@ Tilemap:
   - first: {x: 2, y: -42, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 3, y: -42, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 21
-      m_TileSpriteIndex: 21
+      m_TileIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -9724,21 +9726,21 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d358db5499a17b54da0b7541e73aad5c, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 3
-    m_Data: {fileID: 11400000, guid: bd0adafd2601bb74dacbd30d5efcd1d3, type: 2}
-  - m_RefCount: 3
-    m_Data: {fileID: 11400000, guid: 4c2ab8d1b414b78428c36d5f26d2ed83, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 7f36776e1b185bd479fe5d20e2e23995, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: d6dcffd7ba5598f498736d5eef96c311, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6f8ffdf4dd9eff74d826989fdc289ecc, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8cbb1fc886e2cf04083457e2b390e43b, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 6ac5fee16c2e8da4d91c8ad5aab85514, type: 2}
-  - m_RefCount: 142
+  - m_RefCount: 147
     m_Data: {fileID: 11400000, guid: d9f98adac48e02c4ca93094b79d999d5, type: 2}
   - m_RefCount: 25
     m_Data: {fileID: 11400000, guid: abda9aa6300cb6f41b158d099eca5d4d, type: 2}
@@ -9754,13 +9756,13 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 016dd1fa05139b84bb19f6093b8d47ad, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 459c2e03bb14cdf4dae2362f1262683f, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 7132df73d3b7c064a99bfd90180b547c, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 0fddfa2d4f697ab47a0d9828b6a04ebf, type: 2}
   - m_RefCount: 23
     m_Data: {fileID: 11400000, guid: fa17457a5ccc7d746bdad9e715199991, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 13aa7ade8e3b9bf4ea6cd47eee0db525, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
@@ -9777,19 +9779,19 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 3
-    m_Data: {fileID: 21300022, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 3
-    m_Data: {fileID: 21300340, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300206, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300096, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300094, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300020, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 21300018, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 21300026, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 142
+  - m_RefCount: 147
     m_Data: {fileID: 21300000, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: 21300330, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
@@ -9805,16 +9807,16 @@ Tilemap:
     m_Data: {fileID: 21300306, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300308, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 21300282, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 21300280, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   - m_RefCount: 23
     m_Data: {fileID: 21300310, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 4
     m_Data: {fileID: 21300262, guid: cf57b3e7835b02e4493371d9bc259b1b, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 287
+  - m_RefCount: 286
     m_Data:
       e00: 1
       e01: 0
@@ -9833,7 +9835,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 287
+  - m_RefCount: 286
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -10045,9 +10047,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &2027875963542436408
 GameObject:
   m_ObjectHideFlags: 0
@@ -10121,9 +10124,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &2219852219612369454
 GameObject:
   m_ObjectHideFlags: 0
@@ -10151,7 +10155,7 @@ Transform:
   m_GameObject: {fileID: 2219852219612369454}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 108.69, y: -23.09, z: 1.9000738}
+  m_LocalPosition: {x: 107.26, y: -33.5, z: 1.9000738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10197,9 +10201,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &2652820692696159068
 GameObject:
   m_ObjectHideFlags: 0
@@ -10273,9 +10278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &2703543325652267059
 GameObject:
   m_ObjectHideFlags: 0
@@ -10752,9 +10758,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 2
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Are you.. searching for something?
 --- !u!1 &3009607375225224026
 GameObject:
   m_ObjectHideFlags: 0
@@ -10828,9 +10836,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
+--- !u!1 &3010414776300792952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7898301393589302233}
+  - component: {fileID: 3290272450155430333}
+  - component: {fileID: 6047246947141828752}
+  m_Layer: 0
+  m_Name: DroneWaypoint (38)
+  m_TagString: DroneLocation
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7898301393589302233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010414776300792952}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.13, y: -25.56, z: 1.9000738}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4890873783931321335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3290272450155430333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010414776300792952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866076db2bc4d11469fa35830a240cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCollidableEditor: 0
+  <isActive>k__BackingField: 0
+  <isInteractable>k__BackingField: 0
+  interactableType: 0
+  <interactPlayer>k__BackingField: 0
+  <interactButton>k__BackingField: 0
+  <interactTime>k__BackingField: 0
+  <isSingleUse>k__BackingField: 0
+  <interactRange>k__BackingField: 0
+  <triggerFlag>k__BackingField: []
+  PressurePlateActuationMass: 0
+  FreebodyMass: 0
+  PickupObject: {fileID: 0}
+  DoorIsTriggered: 0
+  DoorFlagTriggeredBy: 
+  DistanceToPlayer: 0
+--- !u!114 &6047246947141828752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010414776300792952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerOfInterest: 1
+  shouldUpdateText: 0
+  nodeAccessed: 0
+  newText: []
 --- !u!1 &3061468635021428150
 GameObject:
   m_ObjectHideFlags: 0
@@ -33381,9 +33467,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 2
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - The sewers are an awfully dank place to traverse
 --- !u!1 &3990099131261725722
 GameObject:
   m_ObjectHideFlags: 0
@@ -33457,9 +33545,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &4059307490030734967
 GameObject:
   m_ObjectHideFlags: 0
@@ -33533,9 +33622,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 2
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - I'll refer to you, [Player2], as..
+  - ...
+  - Ember?
+  - that'll do
 --- !u!1 &4471969127846806774
 GameObject:
   m_ObjectHideFlags: 0
@@ -33563,7 +33657,7 @@ Transform:
   m_GameObject: {fileID: 4471969127846806774}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.53, y: -34.26, z: 1.9000738}
+  m_LocalPosition: {x: 29.78, y: -34.26, z: 1.9000738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33609,9 +33703,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 1
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Well then, this seems like quite a jump!
+  - However, you...
+  - Who are you?
+  - The funny-looking one with the hat
+  - ..You seem sprightly enough to make it over
+  - '*Double tap a directional key to DASH in a direction*'
 --- !u!1 &4521085235940207802
 GameObject:
   m_ObjectHideFlags: 0
@@ -33685,9 +33786,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &4644493153128091795
 GameObject:
   m_ObjectHideFlags: 0
@@ -37382,9 +37484,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 0
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &4789715033788859214
 GameObject:
   m_ObjectHideFlags: 0
@@ -37607,9 +37710,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &4855060962137374086
 GameObject:
   m_ObjectHideFlags: 0
@@ -37682,6 +37786,7 @@ Transform:
   - {fileID: 8327943448741583661}
   - {fileID: 6086071154478843748}
   - {fileID: 3358404766657265343}
+  - {fileID: 7898301393589302233}
   - {fileID: 2775615151025206693}
   - {fileID: 5217495866444279688}
   - {fileID: 111398849745777913}
@@ -37823,9 +37928,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Alright, there's another wall you have to break
 --- !u!1 &5383164705868821351
 GameObject:
   m_ObjectHideFlags: 0
@@ -37853,7 +37960,7 @@ Transform:
   m_GameObject: {fileID: 5383164705868821351}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.22, y: -23.27, z: 1.9000738}
+  m_LocalPosition: {x: 106.92, y: -23.27, z: 1.9000738}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37899,9 +38006,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 1
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - '!!'
 --- !u!1 &5482989835191405202
 GameObject:
   m_ObjectHideFlags: 0
@@ -37975,9 +38084,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Nice Work!
 --- !u!1 &5486092619928004725
 GameObject:
   m_ObjectHideFlags: 0
@@ -38051,9 +38162,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 2
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - 'What even compelled you two to come here? '
 --- !u!1 &5632746178692071124
 GameObject:
   m_ObjectHideFlags: 0
@@ -38127,9 +38240,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &5644352759180449013
 GameObject:
   m_ObjectHideFlags: 0
@@ -38203,9 +38317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 0
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &5669373588572487642
 GameObject:
   m_ObjectHideFlags: 0
@@ -38401,9 +38516,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &5992946255949866760
 GameObject:
   m_ObjectHideFlags: 0
@@ -38477,9 +38593,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &6188546282090858557
 GameObject:
   m_ObjectHideFlags: 0
@@ -38584,9 +38701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &6280080640419163493
 GameObject:
   m_ObjectHideFlags: 0
@@ -38902,9 +39020,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &7298060173732318326
 GameObject:
   m_ObjectHideFlags: 0
@@ -38978,9 +39097,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &7368991890406122513
 GameObject:
   m_ObjectHideFlags: 0
@@ -39054,9 +39174,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 1
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Nice job, now hit <DownArrow> to interact with that lever
+  - It'll bring up a platform for the other... guy...
+  - I really should give you two names, shouldn't I?
 --- !u!1 &7376469592041640296
 GameObject:
   m_ObjectHideFlags: 0
@@ -39130,9 +39254,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 1
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Ok, ember, you get to work on that wall there
+  - The next lever is somewhere above
+  - Shade, you think you can get there?
 --- !u!1 &8914627714018195531
 GameObject:
   m_ObjectHideFlags: 0
@@ -39430,9 +39558,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shouldUpdateText: 0
+  playerOfInterest: 2
+  shouldUpdateText: 1
   nodeAccessed: 0
-  newText: 
+  newText:
+  - Alright, this wall is a bit more fragile than the rest
+  - Although it won't break on its own....
+  - You see, [Player2] can dash too!
+  - '*[P2, dash into the breakable wall]*'
 --- !u!1 &9027771361715756321
 GameObject:
   m_ObjectHideFlags: 0
@@ -39506,9 +39639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 2
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1 &9058560827220973611
 GameObject:
   m_ObjectHideFlags: 0
@@ -39582,9 +39716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dadedaf49d8286408d804462fa01aee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerOfInterest: 1
   shouldUpdateText: 0
   nodeAccessed: 0
-  newText: 
+  newText: []
 --- !u!1001 &162090281411350748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39758,8 +39893,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 952119792925842377, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
+      propertyPath: playerOfInterest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952119792925842377, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
       propertyPath: shouldUpdateText
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 952119792925842377, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
+      propertyPath: newText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 952119792925842377, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
+      propertyPath: newText.Array.data[0]
+      value: test
       objectReference: {fileID: 0}
     - target: {fileID: 3170843007354091989, guid: 2633dd8df44227244800b322bcb8af0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -40779,11 +40926,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
       propertyPath: newText
-      value: 
+      value: MAINTAINACE DRONE ACTIVATION SEQUENCE INITIATED
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: playerOfInterest
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
       propertyPath: shouldUpdateText
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[1]
+      value: .
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[2]
+      value: ..
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[3]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[4]
+      value: ....
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[5]
+      value: ......
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[6]
+      value: DRONE REBOOTED SUCCESSFULLY
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[7]
+      value: Hello?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[8]
+      value: Is this reaching you?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[9]
+      value: ' *PLAYER 1: A/D to move left/right*'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6686967879735540228, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
+      propertyPath: newText.Array.data[10]
+      value: '* PLAYER 2: </>  to move left/right*'
       objectReference: {fileID: 0}
     - target: {fileID: 8210173224719778303, guid: 7672388fa3fd7a1448c781fb86f51c2c, type: 3}
       propertyPath: m_LocalPosition.x

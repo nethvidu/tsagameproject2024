@@ -13,9 +13,10 @@ public class WaypointLogic : MonoBehaviour
 {
     DroneMove Drone;
 
+    public int playerOfInterest = 1;
     public bool shouldUpdateText;
     public bool nodeAccessed;
-    public string newText;
+    public string[] newText;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,8 @@ public class WaypointLogic : MonoBehaviour
         
     }
     public void AccessNode(){
-        if(newText != "" && this.shouldUpdateText && !this.nodeAccessed){
+        if(this.shouldUpdateText && !this.nodeAccessed){
+            Drone.playerOfInterest = playerOfInterest;
             Drone.text.text = "";
             StartCoroutine(ChangeText());
             Debug.Log("dialogue");
@@ -40,10 +42,16 @@ public class WaypointLogic : MonoBehaviour
     }
     IEnumerator ChangeText(){
         this.nodeAccessed = true;
-        foreach(char e in newText.ToCharArray()){
-            Drone.text.text += e;
-            yield return new WaitForSeconds(0.3f);
+        float Speed = 0.05f;
+        for(int i = 0; i < newText.Length; i++){
+            foreach(char e in newText[i].ToCharArray()){
+                Drone.text.text += e;
+                yield return new WaitForSeconds(Speed);
+            }
+            yield return new WaitForSeconds(1f);
+            Drone.text.text = "";
         }
-        
+        yield break;
+
     }
 }

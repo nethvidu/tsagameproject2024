@@ -7,7 +7,8 @@ public class Average: MonoBehaviour
     [field: SerializeField] 
     public Transform objectA; 
     [field: SerializeField] 
-
+    public float publicoffset = 1f;
+    private float offset = 1f;
     public Transform objectB; 
     [field: SerializeField] 
     public Transform objectC; 
@@ -32,15 +33,17 @@ public class Average: MonoBehaviour
                 if(Vector2.Distance((objectA.position + objectB.position) / 2, objectC.position) < 5){
                     averagePosition = (objectA.position + objectB.position + objectC.position) / 3;
                     Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/6+(distance), Time.deltaTime * 2);
+                    offset = publicoffset/2;
                 } else {
                     averagePosition = (objectA.position + objectB.position) / 2;
                     Camera.m_Lens.OrthographicSize = Mathf.Lerp(Camera.m_Lens.OrthographicSize, currentSize/6+(distance), Time.deltaTime * 2);
+                    offset = publicoffset;
                 }
             }
             distance = Vector2.Distance(objectA.position, objectB.position);
 
             // Place the target object at the midpoint
-            transform.position = averagePosition + new Vector3(0, distance/70f,0);
+            transform.position = averagePosition + new Vector3(0, distance/60f + offset,0);
             
         }
     }

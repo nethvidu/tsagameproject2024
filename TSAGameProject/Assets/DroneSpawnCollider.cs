@@ -30,7 +30,6 @@ public class DroneSpawnCollider : MonoBehaviour
     }
     IEnumerator DroneAnim()
     {
-        yield return new WaitForSecondsRealtime(4f);
         droneMove.animator.Play("DroneActivate", -1, 0.0f);
         yield return new WaitForSecondsRealtime(1f);
         droneMove.enabled = true;

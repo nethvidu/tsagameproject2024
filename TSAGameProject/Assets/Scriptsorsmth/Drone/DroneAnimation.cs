@@ -9,7 +9,6 @@ public class DroneAnimation : MonoBehaviour
     void Start()
     {
         //GetComponent<DroneMove>().enabled = false;
-        
     }
 
     // Update is called once per frame
@@ -19,6 +18,5 @@ public class DroneAnimation : MonoBehaviour
     }
     public void PlayStartup()
     {
-        animator.Play("DroneActivate");
     }
 }

@@ -12,7 +12,7 @@ public class DroneMove : MonoBehaviour
     public PlayerControllerRB2D Player1;
     public PlayerControllerRB2D Player2;
     public LayerMask ground;
-    public int playerOfInterest = 0;
+    public int playerOfInterest = 1;
     Vector2 location;
     public Vector2 finalLocation = new Vector2(0, 0);
     public float Speed = 0;
@@ -26,7 +26,7 @@ public class DroneMove : MonoBehaviour
 
     void Start()
     {
-        playerOfInterest = Random.Range(0,1);
+        playerOfInterest = (int)Random.Range(1,2);
         text = GetComponentInChildren<TextMeshProUGUI>();
         animator = GetComponent<Animator>();
     }
@@ -44,10 +44,10 @@ public class DroneMove : MonoBehaviour
         }
         switch (playerOfInterest)
         {
-            case 0:
+            case 1:
                 finalLocation = Player1.transform.position;
                 break;
-            case 1:
+            case 2:
                 finalLocation = Player2.transform.position;
                 break;
         }
